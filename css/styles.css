@@ -52,7 +52,8 @@ h1{
     font-family: 'Glass Antiqua';
     color: rgb(77, 0, 128);
     display: block;
-    text-align: center;    
+    text-align: center; 
+    font-weight: 900;   
 }
 
 .hero{
@@ -329,7 +330,6 @@ footer i{
 
 .vision{
     display: flex;
-    /*background-color: rgb(216, 180, 251);*/
 }
 
 .vision img{
@@ -411,7 +411,7 @@ footer i{
 .productos-description{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
@@ -424,3 +424,75 @@ footer i{
     height: 90%;
     width: 100%;
 }
+
+/*TERAPIAS*/
+.galeria-grid{
+    width: 100%;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 350px;
+    gap: 10px;  
+}
+
+.galeria-grid div img{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.galeria-grid div{
+    position: relative;
+}
+
+.galeria-grid div h3{
+    position: absolute;
+    bottom: 0;
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.644);
+    width: 90%;
+    padding: 5px;
+    font-family: 'Roboto';
+    font-size: 1rem;
+}
+
+.le-1{
+    grid-column: span 1;
+}
+
+.le-2{
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.r-1{
+    grid-row: span 2;
+    grid-column: span 4;
+}
+
+.te-1{
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+/*GALERIA*/
+.hero-galeria{
+display: block;
+margin: 10px;
+padding: 10px;
+text-align: center;
+}
+
+.galeria{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.galeria img{
+    height: 500px;
+    margin: 90px;
+}
+/*MEDIA QUERIES*/
+
+

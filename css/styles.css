@@ -1,23 +1,24 @@
- /*----FUENTES----*/
-@import url('https://fonts.googleapis.com/css2?family=Glass+Antiqua&family=Roboto:wght@300&display=swap');
+/*----FUENTES----*/
+@import url("https://fonts.googleapis.com/css2?family=Glass+Antiqua&family=Roboto:wght@300&display=swap");
 
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
-nav{
+
+/*NAV BAR*/
+nav {
     width: 100%;
-    height: 80px;
+    height: 100px;
     background-color: rgba(170, 127, 255, 0.341);
 }
 
-.enlace{
+.enlace {
     position: absolute;
 }
 
-
-.logo{
+.logo {
     padding: 5px;
     width: 80px;
     height: 80px;
@@ -26,21 +27,22 @@ nav{
     justify-content: start;
     align-items: center;
     margin-left: 10px;
+    margin-top: 10px;
 }
 
-nav ul{
+nav ul {
     list-style: none;
     float: right;
     margin-right: 20px;
 }
 
-nav ul li{
+nav ul li {
     display: inline-block;
     line-height: 80px;
     margin: 0 5px;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     display: flex;
     justify-content: space-evenly;
@@ -48,16 +50,18 @@ nav ul li a{
     font-size: 20px;
     position: sticky;
     margin-right: 20px;
-    font-family: 'Roboto';
+    font-family: "Roboto";
+    align-items: center;
+    justify-content: center;
 }
 
-.li a:active, li a:hover{
-    text-decoration: line-through white;
-    transition: .5s;
+li a:active,
+li a:hover {
+    text-decoration: line-through;
+    transition: 0.5s;
 }
-
 /*MENU HAMBURGUESA*/
-.hamb{
+.hamb {
     font-size: 30px;
     float: right;
     line-height: 80px;
@@ -66,31 +70,30 @@ nav ul li a{
     display: none;
 }
 
-#btn-menu{
+#btn-menu {
     display: none;
 }
 
-/*MENU RESPONSIVE HAMB*/
+/*MAIN*/
 
-
-
-
-h1{
-    font-size: 100px;
-    font-family: 'Glass Antiqua';
-    color: rgb(77, 0, 128);
+h1 {
     display: block;
-    text-align: center; 
+    text-align: center;
     justify-content: center;
-    font-weight: 900;   
+    align-items: center;
+    font-size: 100px;
+    font-family: "Glass Antiqua";
+    color: rgb(77, 0, 128);
+    font-weight: 900;
 }
 
-.hero{
+.hero {
+    display: inline-block;
     box-sizing: border-box;
     background-image: url(../img/espaciovic.webp);
     text-align: center;
     color: rgb(214, 203, 240);
-    width: 100%px;
+    width: 100%;
     height: 30rem;
     background-repeat: no-repeat;
     background-size: cover;
@@ -98,12 +101,12 @@ h1{
     background-attachment: fixed;
 }
 
-.hero p{
+.hero p {
     font-size: 25px;
-    font-weight: 500 ;
+    font-weight: 500;
     text-align: center;
     color: rgb(224, 215, 243);
-    font-family: 'Roboto';
+    font-family: "Roboto";
     margin: 10px;
     display: flex;
     flex-direction: column;
@@ -111,47 +114,49 @@ h1{
     align-items: center;
 }
 
-.hero a{
+.hero a {
     text-decoration: none;
     color: rgb(255, 255, 255);
-    font-family: 'Roboto';
+    font-family: "Roboto";
 }
 
-.boton{
+.boton {
     font-size: 18px;
     text-align: center;
     color: antiquewhite;
-    font-family: 'Roboto';
+    font-family: "Roboto";
+}
+.boton:hover {
+    background-color: blueviolet;
 }
 
-.blog h2{
+.blog h2 {
     display: block;
     font-size: 60px;
     text-align: center;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     color: rgb(77, 0, 128);
     margin-top: 2rem;
 }
 
-.p3{
+.p3 {
     display: block;
     text-align: center;
     font-size: 20px;
     color: black;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     margin: 20px;
 }
 
-
-.cajas .caja-cont{
+.cajas .caja-cont {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    font-family: 'Roboto';
+    font-family: "Roboto";
 }
 
-.caja{
+.caja {
     background-color: rgb(217, 199, 241);
     min-width: 200px;
     max-width: 400px;
@@ -159,9 +164,9 @@ h1{
     margin: 20px;
     padding: 20px;
     border: rgb(152, 146, 175) solid 2px;
-    box-shadow: 2px 6px 5px 0px rgba(151,112,153,0.5);
--webkit-box-shadow: 2px 6px 5px 0px rgba(151,112,153,0.5);
--moz-box-shadow: 2px 6px 5px 0px rgba(151,112,153,0.5);
+    box-shadow: 2px 6px 5px 0px rgba(151, 112, 153, 0.5);
+    -webkit-box-shadow: 2px 6px 5px 0px rgba(151, 112, 153, 0.5);
+    -moz-box-shadow: 2px 6px 5px 0px rgba(151, 112, 153, 0.5);
 }
 
 img {
@@ -172,78 +177,80 @@ img {
     align-items: center;
 }
 
-h3{
+h3 {
     font-size: 28px;
     font-weight: bold;
     color: rgb(77, 0, 128);
     margin: 2px;
     padding: 2px;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     text-align: center;
 }
 
-.contacto p{
+.contacto p {
     font-size: 20px;
     color: rgb(77, 0, 128);
-    font-family: 'Roboto';
+    font-family: "Roboto";
     display: flex;
     text-align: center;
     justify-content: center;
-    margin: 60px;   
+    margin: 30px;
 }
 
-.formulario{
+.formulario {
     display: flex;
     justify-content: center;
     text-align: left;
     padding: 20px;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     flex-direction: column;
     margin: auto;
-    margin-bottom: 140px;
+    margin-bottom: 30px;
     width: 90%;
     max-width: 400px;
     background-color: rgb(217, 199, 241);
     height: 500px;
     border: rgb(152, 146, 175) solid 2px;
-    box-shadow: 2px 6px 5px 0px rgba(151,112,153,0.5);
--webkit-box-shadow: 2px 6px 5px 0px rgba(151,112,153,0.5);
--moz-box-shadow: 2px 6px 5px 0px rgba(151,112,153,0.5);
-border-radius: 5px;
+    box-shadow: 2px 6px 5px 0px rgba(151, 112, 153, 0.5);
+    -webkit-box-shadow: 2px 6px 5px 0px rgba(151, 112, 153, 0.5);
+    -moz-box-shadow: 2px 6px 5px 0px rgba(151, 112, 153, 0.5);
+    border-radius: 5px;
 }
 
-h2{
+h2 {
     font-size: 70px;
     text-align: center;
     color: blueviolet;
 }
 
-label{
+label {
     color: rgb(162, 100, 237);
     font-size: 20px;
     font-weight: 600px;
-    margin-bottom: 10px;  
+    margin-bottom: 10px;
 }
 
-input, textarea{
+input,
+textarea {
     padding: 10px;
     border-radius: 1px;
     margin-bottom: 10px;
     background-color: rgb(232, 217, 248);
     border: 1px solid rgb(181, 109, 240, 250);
     text-align: left;
-    font-family: 'Roboto';
+    font-family: "Roboto";
 }
 
-input{
+input {
     justify-content: flex-start;
 }
 
-input::placeholder, textarea::placeholder{
+input::placeholder,
+textarea::placeholder {
     color: gray;
 }
 
-.botone{
+.botone {
     font-size: 16px;
     background-color: rgb(203, 182, 232);
     color: rgb(52, 12, 90);
@@ -256,24 +263,21 @@ input::placeholder, textarea::placeholder{
     padding: 10px;
     align-items: center;
     justify-content: center;
-    box-shadow: 7px 8px 400px 40px rgba(80,36,125,0.75);
--webkit-box-shadow: 7px 8px 400px 40px rgba(80,36,125,0.75);
--moz-box-shadow: 7px 8px 400px 40px rgba(80,36,125,0.75);
-    font-family: 'Roboto';
+    box-shadow: 7px 8px 400px 40px rgba(80, 36, 125, 0.75);
+    -webkit-box-shadow: 7px 8px 400px 40px rgba(80, 36, 125, 0.75);
+    -moz-box-shadow: 7px 8px 400px 40px rgba(80, 36, 125, 0.75);
+    font-family: "Roboto";
 }
 
-.botone:hover{
+.botone:hover {
     background-color: rgb(181, 139, 221);
 }
- 
-.boton:hover{
-    background-color: blueviolet;
-}
 
-main i{
+
+main i {
     font-size: 50px;
-    background-color: #25D366;
-    color: #FFFFFF;
+    background-color: #25d366;
+    color: #ffffff;
     padding: 5px;
     border-radius: 50%;
     position: fixed;
@@ -281,65 +285,64 @@ main i{
     right: 30px;
 }
 
-.cont-foot{
+.cont-foot {
     display: flex;
     background-color: rgb(217, 199, 241);
     font-size: 20px;
     padding: 20px;
     align-items: end;
     justify-content: space-between;
-    font-family: 'Roboto'; 
-    margin-top: 20px;
+    font-family: "Roboto";
+    margin-top: 20px; 
 }
 
-footer i{
+footer i {
     font-size: 40px;
     color: blueviolet;
 }
 
 /*QUIENES SOMOS*/
 
-.hero-qs p{
+.hero-qs p {
     display: flex;
     font-size: 25px;
     font-weight: 500;
     text-align: center;
     color: rgb(50, 28, 97);
-    font-family: 'Roboto';
+    font-family: "Roboto";
     margin: 0 auto;
     padding: 30px;
     width: 90%;
 }
 
-.caja-cont-qs{
+.caja-cont-qs {
     display: flex;
     width: 90%;
+    height: auto;
     margin: 0 auto;
     color: rgb(50, 28, 97);
     font-size: 20px;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     padding: 10px;
     flex-direction: column;
     background-color: rgb(216, 180, 251);
-
 }
 
-.mision{
+.mision {
     display: flex;
-    /*background-color: rgb(216, 180, 251);*/
 }
 
-.mision img{
+.mision img {
     width: 80%;
     height: 33.3%;
     padding: 30px;
 }
 
-.mision-description{
+.mision-description {
     padding-inline: 16px;
 }
 
-.mision h3{
+.mision h3 {
     font-size: 30px;
     color: rgb(77, 0, 128);
     text-align: left;
@@ -349,31 +352,31 @@ footer i{
     margin-bottom: 5px;
 }
 
-.mision p{
+.mision p {
     font-size: 20px;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     flex-direction: row;
     align-items: right;
     padding-top: 25px;
 }
 
-.vision{
+.vision {
     display: flex;
 }
 
-.vision img{
+.vision img {
     width: 80%;
     height: 33.3%;
     padding: 10px;
     padding: 30px;
 }
 
-.vision-description{
+.vision-description {
     order: -1;
     padding-inline: 16px;
 }
 
-.vision h3{
+.vision h3 {
     font-size: 30px;
     font-weight: 700;
     color: rgb(77, 0, 128);
@@ -383,35 +386,34 @@ footer i{
     margin-bottom: 20px;
 }
 
-.vision p{
+.vision p {
     font-size: 20px;
     font-weight: 400;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     flex-direction: row;
     align-items: right;
     padding-top: 10px;
     text-align: right;
 }
 
-.valores{
+.valores {
     display: flex;
-    /*background-color: rgb(216, 180, 251);*/
 }
 
-.valores img{
+.valores img {
     width: 80%;
     height: 33.3%;
     padding: 30px;
 }
 
-.valores-description{
+.valores-description {
     padding-inline: 16px;
 }
 
-.valores-description h3{
+.valores-description h3 {
     font-size: 30px;
     font-weight: 700;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     color: rgb(77, 0, 128);
     text-align: left;
     display: block;
@@ -419,190 +421,319 @@ footer i{
     margin-bottom: 10px;
 }
 
-.valores-description h3 ul li{
+.valores-description h3 ul li {
     font-size: 20px;
     font-weight: 400;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     flex-direction: row;
     align-items: right;
     padding-top: 10px;
 }
 
-
 /*PRODUCTOS*/
-.hero-productos{
+.hero-productos {
     display: block;
     margin: 20px;
     padding: 20px;
     text-align: center;
 }
 
-.productos-description{
+.productos-description {
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
-.talleres{
+.talleres {
     width: 30%;
     margin: 10px;
 }
 
-.talleres img{
+.talleres img {
     height: 90%;
     width: 100%;
 }
 
 /*TERAPIAS*/
-.galeria-grid{
+.galeria-grid {
     width: 100%;
     margin: 50px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: 350px;
-    gap: 10px;  
+    gap: 10px;
 }
 
-.galeria-grid div img{
+.galeria-grid div img {
     width: 90%;
     height: 90%;
     object-fit: cover;
 }
 
-.galeria-grid div{
+.galeria-grid div {
     position: relative;
 }
 
-.galeria-grid div h3{
+.galeria-grid div h3 {
     position: absolute;
     bottom: 0;
-    color: #FFFFFF;
+    color: #ffffff;
     background-color: rgba(0, 0, 0, 0.644);
     width: 90%;
     padding: 5px;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-size: 1rem;
 }
 
-.le-1{
+.le-1 {
     grid-column: span 1;
 }
 
-.le-2{
+.le-2 {
     grid-column: span 1;
     grid-row: span 1;
 }
 
-.r-1{
+.r-1 {
     grid-row: span 2;
     grid-column: span 4;
 }
 
-.te-1{
+.te-1 {
     grid-column: span 1;
     grid-row: span 1;
 }
 
 /*GALERIA*/
-.hero-galeria{
-display: block;
-margin: 10px;
-padding: 10px;
-text-align: center;
+.hero-galeria {
+    display: block;
+    text-align: center;
+    width: 100%;
 }
 
-.galeria{
+.galeria {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.galeria img{
+
+.galeria img {
     height: 500px;
-    margin: 90px;
+    margin: 50px;
 }
 
 /*MEDIA QUERIES*/
 
-@media screen and (max-width: 1030px){
-    .galeria-grid{
+@media screen and (max-width: 1030px) {
+    .galeria-grid {
         grid-template-columns: repeat(3, 1fr);
         grid-auto-rows: 350px;
-        gap: 10px;  
+        gap: 10px;
     }
 
-    .r-1{
+    .r-1 {
         grid-row: span 1;
         grid-column: span 2;
     }
-
 }
 
-@media screen and (max-width: 840px){
-    .enlace{
+@media screen and (max-width: 880px){
+    /*MEDIA QUERIES QS*/
+h1 {
+    font-size: 60px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+.hero-qs p {
+    display: block;
+    font-size: 20px;
+    padding: 20px;
+}
+.caja-cont-qs {
+    display: block;
+    width: 90%;
+    height: auto;
+}
+.mision {
+    display: block;
+}
+.mision h3 {
+    display: block;
+    font-size: 25px;
+    color: rgb(77, 0, 128);
+    text-align: left;
+    padding: 5px;
+    margin: 5px;
+}
+.mision p {
+    font-size: 16px;
+    align-items: left;
+    padding: 5px;
+}
+.mision img {
+    width: 100%;
+    padding: 10px;
+}
+.vision {
+    display: block;
+}
+.vision img {
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+}
+.vision h3 {
+    display: block;
+    font-size: 25px;
+    text-align: left;
+    margin-top: 20px;
+}
+.vision p {
+    font-size: 16px;
+    text-align: left;
+}
+.valores {
+    display: block;
+}
+.valores-description {
+    padding-top: 5px;
+    height: auto;
+}
+.valores img {
+    width: 100%;
+    height: 33.3%;
+    padding: 5px;
+}
+.valores-description h3 {
+    font-size: 25px;
+    text-align: left;
+    display: block;
+}
+.valores-description h3 ul li {
+    font-size: 16px;
+    align-items: left;
+    padding-top: 5px;
+}
+}
+
+@media screen and (max-width: 840px) {
+    .enlace {
         padding-left: 30px;
     }
-    nav ul li a{
+
+    nav ul li a {
         font-size: 1rem;
     }
 }
 
-@media screen and (max-width:750px){
-    .galeria-grid{
+@media screen and (max-width: 750px) {
+    .galeria-grid {
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 250px;
-        gap: 5px;  
+        gap: 5px;
     }
 
-    .r-1{
+    .r-1 {
         grid-row: span 1;
         grid-column: span 1;
     }
-
 }
 
-@media screen and (max-width: 710px){
-    .hamb{
+@media screen and (max-width: 710px) {
+    .hamb {
         display: block;
     }
-    ul{
+
+    ul {
         position: fixed;
         width: 100%;
         height: 100vh;
-        background: rgb(217, 199, 241); 
+        background: rgb(217, 199, 241);
         top: 80px;
         left: -100%;
         text-align: center;
-        transition: all .5s;
+        transition: all 0.5s;
+        z-index: 1 !important;
     }
-    nav ul li{
+
+    nav ul li {
         display: block;
         margin: 50px 0;
         line-height: 30px;
     }
-    nav ul li a{
+
+    nav ul li a {
         font-size: 20px;
     }
-    li a:hover, li a.active{
+
+    li a:hover,
+    li a.active {
         background: none;
         color: blueviolet;
     }
-    #btn-menu:checked ~ ul{
+
+    #btn-menu:checked~ul {
         left: 0;
     }
-}
-
-
-
-@media screen and (max-width: 320px){
-    .galeria-grid{
-        grid-template-columns: repeat(1, 1fr);
-        grid-auto-rows: 350px;
-        gap: 5px;  
+    /*TERAPIAS*/
+    .galeria-grid {
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 450px;
+        margin-top: 10px;
     }
-    .r-1{
-        grid-row: span 1;
-        grid-column: span 1;
+
+    .galeria-grid div h3 {
+        position: absolute;
+        color: #ffffff;
+        background-color: rgba(0, 0, 0, 0.644);
+        width: 88%;
+        padding: 5px;
+        align-items: center;
+        justify-content: center;
     }
+
+    /*PRODUCTOS*/
+    .hero-productos {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .productos-description {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .talleres {
+        width: 90%;
+    }
+
+    /*CONTACTO*/
+    .contacto p {
+        display: block;
+        margin: 30px;
+    }
+    /*QS*/
+    .caja-cont-qs {
+        display: block;
+        width: 90%;
+        height: auto;
+    }
+    .valores-description {
+        padding-top: 5px;
+        height: auto;
+        display: block;
+    }
+
+    .valores-description h3 ul li {
+        font-size: 16px;
+        align-items: left;
+        padding-top: 5px;
+    }
+
 }

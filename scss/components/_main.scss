@@ -16,7 +16,7 @@ main {
 
         p {
             font-size: 20px;
-            color: rgb(77, 0, 128);
+            color: rgb(200, 168, 221);
             font-family: "Roboto";
             display: flex;
             text-align: center;
@@ -25,14 +25,13 @@ main {
         }
     }
 
-    .boton {
+    .boton{
         text-decoration: none;
         color: rgb(255, 255, 255);
         font-family: "Roboto";
         font-size: 18px;
         text-align: center;
         color: antiquewhite;
-
         &:hover {
             background-color: blueviolet;
         }
@@ -179,19 +178,6 @@ main {
         }
     }
 
-    .hero-qs{
-        p{
-            font-size: 16px;
-            font-weight: 500;
-            text-align: center;
-            color: rgb(128, 83, 224);
-            font-family: "Roboto";
-            margin: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
     }
     .caja-cont-qs {
         display: flex;
@@ -232,6 +218,7 @@ main {
                     align-items: left;
                     justify-content: left;
                     padding: 5px;
+                    color: rgb(77, 0, 128)
                     
                 }
             }
@@ -270,6 +257,7 @@ main {
                 align-items: right;
                 padding-top: 10px;
                 text-align: right;
+                color: rgb(77, 0, 128)
             }
         }
 
@@ -304,6 +292,7 @@ main {
                         flex-direction: row;
                         align-items: right;
                         padding-top: 10px;
+                        color: rgb(77, 0, 128)
                     }
                 }
             }
@@ -333,4 +322,3 @@ main {
             }
         }
     }
-}

@@ -14,18 +14,18 @@ h1 {
   color: #4d0080;
   font-weight: 900; }
 
-/*p {
-    font-size: 16px;
-    font-weight: 500;
-    text-align: center;
-    color: rgb(128, 83, 224);
-    font-family: "Roboto";
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}*/
+p {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: #8053e0;
+  font-family: "Roboto";
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
 .botone {
   font-size: 16px;
   background-color: #cbb6e8;
@@ -58,16 +58,18 @@ main i {
 
 .galeria-grid {
   width: 100%;
-  margin: 50px;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 350px;
-  gap: 10px; }
-  .galeria-grid .foto-grid {
+  gap: 5px;
+  grid-template-areas: "le-1 le-2 le-2" "r-1 r-1 te1"; }
+  .galeria-grid div {
     position: relative; }
-    .galeria-grid .foto-grid .le-1 {
-      grid-column: span 1; }
-    .galeria-grid .foto-grid h3 {
+    .galeria-grid div img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+    .galeria-grid div h3 {
       position: absolute;
       bottom: 0;
       color: #ffffff;
@@ -76,19 +78,20 @@ main i {
       padding: 5px;
       font-family: "Roboto";
       font-size: 1rem; }
-    .galeria-grid .foto-grid img {
-      width: 90%;
-      height: 90%;
-      object-fit: cover; }
-    .galeria-grid .foto-grid .le-2 {
+    .galeria-grid div .le-1 {
       grid-column: span 1;
-      grid-row: span 1; }
-    .galeria-grid .foto-grid .r-1 {
-      grid-row: span 2;
-      grid-column: span 4; }
-    .galeria-grid .foto-grid .te-1 {
+      grid-area: le-1; }
+    .galeria-grid div .le-2 {
+      grid-column: span 2;
+      grid-area: le-2; }
+    .galeria-grid div .r-1 {
+      grid-row: span 3;
+      grid-column: span 2;
+      grid-area: r-1; }
+    .galeria-grid div .te1 {
       grid-column: span 1;
-      grid-row: span 1; }
+      grid-row: span 1;
+      grid-area: te1; }
 
 header nav {
   width: 100%;
@@ -154,7 +157,7 @@ main {
     background-attachment: fixed; }
     main .hero p {
       font-size: 20px;
-      color: #4d0080;
+      color: #c8a8dd;
       font-family: "Roboto";
       display: flex;
       text-align: center;
@@ -278,115 +281,110 @@ main {
       font-family: "Roboto"; }
       main .formulario .botone:hover {
         background-color: #b58bdd; }
-  main .hero-qs p {
-    font-size: 16px;
-    font-weight: 500;
-    text-align: center;
-    color: #8053e0;
-    font-family: "Roboto";
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-  main .caja-cont-qs {
-    display: flex;
-    width: 90%;
-    height: auto;
-    margin: 0 auto;
-    color: #321c61;
-    font-size: 20px;
-    font-family: "Roboto";
-    padding: 10px;
-    flex-direction: column;
-    background-color: #d8b4fb; }
-    main .caja-cont-qs .mision {
-      display: flex; }
-      main .caja-cont-qs .mision img {
-        width: 80%;
-        height: 33.3%;
-        padding: 30px; }
-      main .caja-cont-qs .mision .mision-description {
-        padding-inline: 16px; }
-        main .caja-cont-qs .mision .mision-description h3 {
-          font-size: 30px;
-          color: #4d0080;
-          text-align: left;
-          display: block;
-          padding: 20px;
-          margin-top: 20px;
-          margin-bottom: 5px; }
-        main .caja-cont-qs .mision .mision-description p {
-          font-size: 16px;
-          align-items: left;
-          justify-content: left;
-          padding: 5px; }
-    main .caja-cont-qs .vision {
-      display: flex; }
-      main .caja-cont-qs .vision img {
-        width: 80%;
-        height: 33.3%;
-        padding: 10px;
-        padding: 30px; }
-      main .caja-cont-qs .vision .vision-description {
-        order: -1;
-        padding-inline: 16px; }
-      main .caja-cont-qs .vision h3 {
+
+.caja-cont-qs {
+  display: flex;
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  color: #321c61;
+  font-size: 20px;
+  font-family: "Roboto";
+  padding: 10px;
+  flex-direction: column;
+  background-color: #d8b4fb; }
+  .caja-cont-qs .mision {
+    display: flex; }
+    .caja-cont-qs .mision img {
+      width: 80%;
+      height: 33.3%;
+      padding: 30px; }
+    .caja-cont-qs .mision .mision-description {
+      padding-inline: 16px; }
+      .caja-cont-qs .mision .mision-description h3 {
+        font-size: 30px;
+        color: #4d0080;
+        text-align: left;
+        display: block;
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 5px; }
+      .caja-cont-qs .mision .mision-description p {
+        font-size: 16px;
+        align-items: left;
+        justify-content: left;
+        padding: 5px;
+        color: #4d0080; }
+  .caja-cont-qs .vision {
+    display: flex; }
+    .caja-cont-qs .vision img {
+      width: 80%;
+      height: 33.3%;
+      padding: 10px;
+      padding: 30px; }
+    .caja-cont-qs .vision .vision-description {
+      order: -1;
+      padding-inline: 16px; }
+    .caja-cont-qs .vision h3 {
+      font-size: 30px;
+      font-weight: 700;
+      color: #4d0080;
+      text-align: right;
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 20px; }
+    .caja-cont-qs .vision p {
+      font-size: 16px;
+      font-weight: 400;
+      font-family: "Roboto";
+      flex-direction: row;
+      align-items: right;
+      padding-top: 10px;
+      text-align: right;
+      color: #4d0080; }
+  .caja-cont-qs .valores {
+    display: flex; }
+    .caja-cont-qs .valores img {
+      width: 80%;
+      height: 33.3%;
+      padding: 30px; }
+    .caja-cont-qs .valores .valores-description {
+      padding-inline: 16px; }
+      .caja-cont-qs .valores .valores-description h3 {
         font-size: 30px;
         font-weight: 700;
+        font-family: "Roboto";
         color: #4d0080;
-        text-align: right;
+        text-align: left;
         display: block;
         margin-top: 20px;
-        margin-bottom: 20px; }
-      main .caja-cont-qs .vision p {
+        margin-bottom: 10px; }
+      .caja-cont-qs .valores .valores-description ul li {
         font-size: 16px;
         font-weight: 400;
         font-family: "Roboto";
         flex-direction: row;
         align-items: right;
         padding-top: 10px;
-        text-align: right; }
-    main .caja-cont-qs .valores {
-      display: flex; }
-      main .caja-cont-qs .valores img {
-        width: 80%;
-        height: 33.3%;
-        padding: 30px; }
-      main .caja-cont-qs .valores .valores-description {
-        padding-inline: 16px; }
-        main .caja-cont-qs .valores .valores-description h3 {
-          font-size: 30px;
-          font-weight: 700;
-          font-family: "Roboto";
-          color: #4d0080;
-          text-align: left;
-          display: block;
-          margin-top: 20px;
-          margin-bottom: 10px; }
-        main .caja-cont-qs .valores .valores-description ul li {
-          font-size: 16px;
-          font-weight: 400;
-          font-family: "Roboto";
-          flex-direction: row;
-          align-items: right;
-          padding-top: 10px; }
-  main .hero-productos {
-    display: block;
-    margin: 20px;
-    padding: 20px;
-    text-align: center; }
-  main .productos-description {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap; }
-    main .productos-description .talleres {
-      width: 30%;
-      margin: 10px; }
-      main .productos-description .talleres img {
-        height: 80%;
-        width: 100%; }
+        color: #4d0080; }
+
+.hero-productos {
+  display: block;
+  margin: 20px;
+  padding: 20px;
+  text-align: center; }
+
+.productos-description {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+  .productos-description .talleres {
+    width: 30%;
+    margin: 10px; }
+    .productos-description .talleres img {
+      height: 80%;
+      width: 100%; }
 
 footer .cont-foot {
   display: flex;
@@ -402,168 +400,107 @@ footer .cont-foot {
     color: blueviolet; }
 
 /*MEDIA QUERIES*/
-@media screen and (max-width: 1480px) {
+@media screen and (max-width: 1440px) {
   .galeria-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 2fr);
     grid-auto-rows: 350px;
-    gap: 10px; }
+    gap: 10px;
+    grid-template-areas: "le-1 le-2 le-2" "r-1 r-1 te1"; }
+    .galeria-grid .le-1 {
+      grid-column: span 1;
+      grid-area: le-1; }
+    .galeria-grid .le-2 {
+      grid-column: span 2;
+      grid-area: le-2; }
     .galeria-grid .r-1 {
+      grid-row: span 3;
+      grid-area: r-1; }
+    .galeria-grid .te1 {
+      grid-column: span 1;
       grid-row: span 1;
-      grid-column: span 2; } }
-
-@media screen and (max-width: 1080px) {
-  /*MEDIA QUERIES QS*/
-  .hero-qs h1 {
-    font-size: 60px;
-    display: block;
-    align-items: center;
-    justify-content: center; }
+      grid-area: te1; }
   .hero-qs p {
-    display: block;
     font-size: 20px;
-    padding: 20px;
-    text-align: center;
-    justify-content: center; }
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    padding: 10px; }
   .caja-cont-qs {
-    display: block;
-    width: 90%;
-    height: auto; }
-    .caja-cont-qs .mision {
-      display: block; }
-      .caja-cont-qs .mision img {
-        width: 100%;
-        padding: 10px; }
-      .caja-cont-qs .mision h3 {
-        display: block;
-        font-size: 25px;
-        color: #4d0080;
-        text-align: left;
-        padding: 5px;
-        margin: 5px; }
-      .caja-cont-qs .mision p {
-        font-size: 16px;
-        align-items: left;
-        padding: 5px; }
-    .caja-cont-qs .vision {
-      display: block; }
-      .caja-cont-qs .vision img {
-        width: 100%;
-        padding: 5px;
-        margin: 5px; }
-      .caja-cont-qs .vision h3 {
-        display: block;
-        font-size: 25px;
-        text-align: left;
-        margin-top: 20px; }
-      .caja-cont-qs .vision p {
-        font-size: 16px;
-        text-align: left; }
-    .caja-cont-qs .valores {
-      display: block; }
-      .caja-cont-qs .valores .valores-description {
-        padding-top: 5px;
-        height: auto; }
-        .caja-cont-qs .valores .valores-description h3 {
-          font-size: 25px;
-          text-align: left;
-          display: block; }
-        .caja-cont-qs .valores .valores-description img {
-          width: 100%;
-          height: 33.3%;
-          padding: 5px; }
-        .caja-cont-qs .valores .valores-description ul li {
-          font-size: 16px;
-          align-items: left;
-          padding-top: 5px; } }
-
-@media screen and (max-width: 850px) {
-  nav .enlace {
-    padding-left: 30px; }
-  nav ul li a {
-    font-size: 1rem; } }
-
-@media screen and (max-width: 750px) {
-  nav .hamb {
-    display: block; }
-  nav ul {
-    position: fixed;
     width: 100%;
-    height: 100vh;
-    background: #d9c7f1;
-    top: 80px;
-    left: -100%;
-    text-align: center;
-    transition: all 0.5s;
-    z-index: 1 !important; }
-    nav ul li {
-      display: block;
-      margin: 50px 0;
-      line-height: 30px; }
-      nav ul li a {
-        font-size: 20px; }
-        nav ul li a:hover, nav ul li a:active {
-          background: none;
-          color: blueviolet; }
-  nav #btn-menu:checked ~ ul {
-    left: 0; } }
+    margin: 10px; }
+    .caja-cont-qs .mision img {
+      width: 50%;
+      height: 400px;
+      padding: 15px; }
+    .caja-cont-qs .mision .mision-description h3 {
+      font-weight: 700; }
+    .caja-cont-qs .mision .mision-description p {
+      text-align: left;
+      font-size: 20px; }
+    .caja-cont-qs .vision img {
+      width: 50%;
+      height: 400px;
+      padding: 15px; }
+    .caja-cont-qs .vision h3 {
+      margin-top: 30px; }
+    .caja-cont-qs .vision p {
+      font-size: 20px; }
+    .caja-cont-qs .valores img {
+      width: 50%;
+      height: 400px;
+      padding: 15px; } }
 
-/*TERAPIAS*/
-.galeria-grid {
-  width: 90%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: 450px;
-  margin-top: 10px; }
-  .galeria-grid div h3 {
-    position: absolute;
-    color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.644);
-    width: 88%;
-    padding: 5px;
+@media screen and (max-width: 770px) {
+  header nav img.logo {
+    width: 70px;
+    height: 70px; }
+  header nav ul li {
+    display: inline-block; }
+    header nav ul li a {
+      font-size: 18px; }
+      header nav ul li a:active, header nav ul li a:hover {
+        text-decoration: line-through;
+        transition: 0.5s; }
+  h1 {
+    font-size: 80px; }
+  p {
+    font-size: 18px; }
+  .caja-cont-qs .mision .mision-description h3 {
+    font-size: 25px;
+    margin: 15px; }
+  .caja-cont-qs .mision .mision-description p {
+    font-size: 16px;
+    padding-top: 10px; }
+  .caja-cont-qs .vision .vision-description h3 {
+    font-size: 25px; }
+  .caja-cont-qs .vision .vision-description p {
+    font-size: 16px; }
+  .caja-cont-qs .valores .valores-description h3 {
+    font-size: 25px; }
+  .caja-cont-qs .valores .valores-description p {
+    font-size: 16px; }
+  /*PRODUCTOS*/
+  .hero-productos {
+    margin: 5px;
+    padding: 5px; }
+  .productos-description {
+    display: block;
     align-items: center;
     justify-content: center; }
-
-/*PRODUCTOS*/
-.hero-productos {
-  margin: 10px;
-  padding: 10px; }
-  .hero-productos .productos-description {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap; }
-    .hero-productos .productos-description .talleres {
-      width: 90%; }
-
-/*CONTACTO*/
-.contacto p {
-  display: block;
-  margin: 30px; }
-
-/*QS*/
-.caja-cont-qs {
-  display: block;
-  width: 90%;
-  height: auto; }
-  .caja-cont-qs .valores-description {
-    padding-top: 5px;
-    height: auto;
-    display: block; }
-    .caja-cont-qs .valores-description h3 ul li {
-      font-size: 16px;
-      align-items: left;
-      padding-top: 5px; }
-
-@media screen and (max-width: 840px) {
-  nav .enlace {
-    padding-left: 30px; }
-  nav ul li a {
-    font-size: 1rem; } }
-
-@media screen and (max-width: 750px) {
-  .galeria-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 250px;
-    gap: 5px; }
-    .galeria-grid .r-1 {
-      grid-row: span 1;
-      grid-column: span 1; } }
+    .productos-description .talleres {
+      width: 90%;
+      margin-left: 50px;
+      align-items: center;
+      justify-content: center; }
+      .productos-description .talleres img {
+        height: 50%;
+        width: 80%;
+        margin-left: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+      .productos-description .talleres .botone {
+        width: 80%;
+        margin-left: 50px;
+        margin-bottom: 50px;
+        margin-top: 15px; } }

@@ -310,7 +310,7 @@ footer i {
     text-align: center;
     color: rgb(50, 28, 97);
     font-family: "Roboto";
-    margin: 0 auto;
+    margin: 20px;
     padding: 30px;
     width: 90%;
 }
@@ -344,6 +344,7 @@ footer i {
 
 .mision h3 {
     font-size: 30px;
+    font-weight: 700;
     color: rgb(77, 0, 128);
     text-align: left;
     display: block;
@@ -394,6 +395,7 @@ footer i {
     align-items: right;
     padding-top: 10px;
     text-align: right;
+    color: rgb(77, 0, 128);
 }
 
 .valores {

@@ -17,18 +17,18 @@ h1 {
     font-weight: 900;
 }
 
-/*p {
+p {
     font-size: 16px;
     font-weight: 500;
     text-align: center;
     color: rgb(128, 83, 224);
     font-family: "Roboto";
-    margin: 10px;
+    margin: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}*/
+}
 
 .botone {
     font-size: 16px;
@@ -63,23 +63,24 @@ main i {
     bottom: 60px;
     right: 30px;
 }
-
-.galeria-grid {
+.galeria-grid{
     width: 100%;
-    margin: 50px;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 350px;
-    gap: 10px;
-
-    .foto-grid {
+    gap: 5px;
+    grid-template-areas:
+    "le-1 le-2 le-2"
+    "r-1 r-1 te1"
+    ;
+        div{
         position: relative;
-
-        .le-1 {
-            grid-column: span 1;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
-
-        h3 {
+        h3{
             position: absolute;
             bottom: 0;
             color: #ffffff;
@@ -89,28 +90,23 @@ main i {
             font-family: "Roboto";
             font-size: 1rem;
         }
-
-        img {
-            width: 90%;
-            height: 90%;
-            object-fit: cover;
+        .le-1{
+            grid-column: span 1;
+            grid-area: le-1;
         }
-
-        .le-2 {
+        .le-2{
+            grid-column: span 2;
+            grid-area: le-2;
+        }
+        .r-1{
+            grid-row: span 3;
+            grid-column: span 2;
+            grid-area: r-1;
+        }
+        .te1{
             grid-column: span 1;
             grid-row: span 1;
+            grid-area: te1;
         }
-
-        .r-1 {
-            grid-row: span 2;
-            grid-column: span 4;
-        }
-
-        .te-1 {
-            grid-column: span 1;
-            grid-row: span 1;
-        }
-
     }
-    
 }

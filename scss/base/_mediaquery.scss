@@ -94,17 +94,48 @@
 @media screen and(max-width: 770px) {
     header {
         nav {
-            img.logo{
+            justify-items: center;
+            align-items: center;
+            width: 100%;
+
+            img.logo {
                 width: 70px;
                 height: 70px;
+                margin: 15px;
+                padding: 5px;
             }
+
+            .hamb {
+                display: block;
+                color: blueviolet;
+                margin-top: 10px;
+            }
+
+            #btn-menu:checked~ul {
+                left: 0;
+            }
+
             ul {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: rgb(217, 199, 241);
+                top: 80px;
+                left: -100%;
+                text-align: center;
+                transition: all 0.5s;
+                z-index: 1 !important;
+
                 li {
-                    display: inline-block;
+                    display: block;
+                    margin: 50px 0;
+                    line-height: 30px;
+
                     a {
                         font-size: 18px;
+
                         &:active,
-                        &:hover{
+                        &:hover {
                             text-decoration: line-through;
                             transition: 0.5s;
                         }
@@ -113,64 +144,100 @@
             }
         }
     }
-    h1{
-        font-size: 80px;
-    }
-    p{
-        font-size: 18px;
+
+    .hero {
+        color: rgb(214, 203, 240);
+        font-weight: 700;
+
+        a {
+            text-decoration: none;
+            color: rgb(138, 43, 226);
+            font-family: "Roboto";
+            background-color: rgb(217, 199, 241);
+            border-radius: 3px;
+            padding: 5px;
+        }
+
+        .boton {
+            &:hover {
+                background-color: rgb(138, 43, 226);
+                color: rgb(217, 199, 241);
+            }
+        }
+
+        p {
+            font-weight: 800;
+        }
     }
 
-    .caja-cont-qs{
-        .mision{
-            .mision-description{
-                h3{
+    h1 {
+        font-size: 80px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    /*QUIENES SOMOS*/
+    .caja-cont-qs {
+        .mision {
+            .mision-description {
+                h3 {
                     font-size: 25px;
                     margin: 15px;
 
                 }
-                p{
+
+                p {
                     font-size: 16px;
                     padding-top: 10px;
-                }    
-            }     
+                }
+            }
         }
-        .vision{
-            .vision-description{
-                h3{
+
+        .vision {
+            .vision-description {
+                h3 {
                     font-size: 25px;
                 }
-                p{
+
+                p {
                     font-size: 16px;
                 }
             }
         }
-        .valores{
-            .valores-description{
-                h3{
+
+        .valores {
+            .valores-description {
+                h3 {
                     font-size: 25px;
                 }
-                p{
+
+                p {
                     font-size: 16px;
                 }
             }
         }
     }
+
     /*PRODUCTOS*/
-    .hero-productos{
+    .hero-productos {
         margin: 5px;
         padding: 5px;
     }
-    .productos-description{
+
+    .productos-description {
         display: block;
         align-items: center;
         justify-content: center;
 
-        .talleres{
+        .talleres {
             width: 90%;
             margin-left: 50px;
             align-items: center;
             justify-content: center;
-            img{
+
+            img {
                 height: 50%;
                 width: 80%;
                 margin-left: 50px;
@@ -178,12 +245,190 @@
                 align-items: center;
                 justify-content: center;
             }
-            .botone{
+
+            .botone {
                 width: 80%;
                 margin-left: 50px;
                 margin-bottom: 50px;
                 margin-top: 15px;
             }
         }
-    }            
-}    
+    }
+}
+
+@media screen and(max-width: 770px) {
+    .hero-qs {
+        width: 100%;
+
+        h1 {
+            font-size: 50px;
+        }
+
+        p {
+            font-size: 16px;
+            padding: 5px;
+            margin: 5px;
+        }
+    }
+
+    .caja-cont-qs {
+        width: 100%;
+        margin-left: 0;
+
+        .mision {
+            img {
+                width: 100%;
+            }
+
+            display: block;
+
+            .mision-description {
+                h3 {
+                    font-size: 20px;
+                    margin: 5px;
+                    font-weight: 700;
+                    text-align: left;
+                }
+
+                p {
+                    font-size: 16px;
+                    padding-top: 5px;
+                    text-align: justify;
+                }
+            }
+        }
+
+        .vision {
+            img {
+                width: 100%;
+            }
+
+            display: block;
+
+            .vision-description {
+                text-align: left;
+                justify-content: left;
+
+                h3 {
+                    font-size: 20px;
+                    margin: 5px;
+                    text-align: left;
+                    font-weight: 700;
+                }
+
+                p {
+                    font-size: 16px;
+                    text-align: justify;
+                }
+            }
+        }
+
+        .valores {
+            img {
+                width: 100%;
+            }
+
+            display: block;
+
+            .valores-description {
+                h3 {
+                    font-size: 20px;
+                    margin: 5px;
+                    text-align: left;
+                    font-weight: 700;
+                }
+
+                p {
+                    font-size: 16px;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+
+    /*TERAPIAS*/
+    .hero-terapias {
+        h1 {
+            font-size: 60px;
+        }
+    }
+
+    .galeria-grid {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 100%;
+        grid-auto-rows: 350px;
+        gap: 10px;
+        grid-template-areas:
+            "le-1"
+            "le-2"
+            "r-1"
+            "te1"
+        ;
+
+        div {
+            h3 {
+                position: absolute;
+                bottom: 0;
+                color: #ffffff;
+                background-color: rgba(0, 0, 0, 0.644);
+                width: 100%;
+                padding: 5px;
+                font-family: "Roboto";
+                font-size: 1rem;
+            }
+        }
+    }
+
+    /*PRODUCTOS*/
+    .hero-productos {
+        h1 {
+            font-size: 50px;
+        }
+    }
+
+    .productos-description {
+        .talleres {
+            width: 100%;
+            margin-left: 4px;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .contacto {
+        h1 {
+            font-size: 60px;
+            margin: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            margin: 10px;
+        }
+    }
+    .hero-galeria{
+        h1{
+            font-size: 60px;
+        }
+    }
+
+    footer {
+        .cont-foot {
+            font-size: 16px;
+            width: 100%;
+            margin-bottom: 0;
+
+            i {
+                font-size: 18px;
+                color: blueviolet;
+            }
+        }
+    }
+
+    main {
+        i {
+            font-size: 30px;
+        }
+    }
+}

@@ -451,20 +451,60 @@ footer .cont-foot {
       padding: 15px; } }
 
 @media screen and (max-width: 770px) {
-  header nav img.logo {
-    width: 70px;
-    height: 70px; }
-  header nav ul li {
-    display: inline-block; }
-    header nav ul li a {
-      font-size: 18px; }
-      header nav ul li a:active, header nav ul li a:hover {
-        text-decoration: line-through;
-        transition: 0.5s; }
+  header nav {
+    justify-items: center;
+    align-items: center;
+    width: 100%; }
+    header nav img.logo {
+      width: 70px;
+      height: 70px;
+      margin: 15px;
+      padding: 5px; }
+    header nav .hamb {
+      display: block;
+      color: blueviolet;
+      margin-top: 10px; }
+    header nav #btn-menu:checked ~ ul {
+      left: 0; }
+    header nav ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #d9c7f1;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all 0.5s;
+      z-index: 1 !important; }
+      header nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px; }
+        header nav ul li a {
+          font-size: 18px; }
+          header nav ul li a:active, header nav ul li a:hover {
+            text-decoration: line-through;
+            transition: 0.5s; }
+  .hero {
+    color: #d6cbf0;
+    font-weight: 700; }
+    .hero a {
+      text-decoration: none;
+      color: blueviolet;
+      font-family: "Roboto";
+      background-color: #d9c7f1;
+      border-radius: 3px;
+      padding: 5px; }
+    .hero .boton:hover {
+      background-color: blueviolet;
+      color: #d9c7f1; }
+    .hero p {
+      font-weight: 800; }
   h1 {
     font-size: 80px; }
   p {
-    font-size: 18px; }
+    font-size: 16px; }
+  /*QUIENES SOMOS*/
   .caja-cont-qs .mision .mision-description h3 {
     font-size: 25px;
     margin: 15px; }
@@ -504,3 +544,100 @@ footer .cont-foot {
         margin-left: 50px;
         margin-bottom: 50px;
         margin-top: 15px; } }
+
+@media screen and (max-width: 770px) {
+  .hero-qs {
+    width: 100%; }
+    .hero-qs h1 {
+      font-size: 50px; }
+    .hero-qs p {
+      font-size: 16px;
+      padding: 5px;
+      margin: 5px; }
+  .caja-cont-qs {
+    width: 100%;
+    margin-left: 0; }
+    .caja-cont-qs .mision {
+      display: block; }
+      .caja-cont-qs .mision img {
+        width: 100%; }
+      .caja-cont-qs .mision .mision-description h3 {
+        font-size: 20px;
+        margin: 5px;
+        font-weight: 700;
+        text-align: left; }
+      .caja-cont-qs .mision .mision-description p {
+        font-size: 16px;
+        padding-top: 5px;
+        text-align: justify; }
+    .caja-cont-qs .vision {
+      display: block; }
+      .caja-cont-qs .vision img {
+        width: 100%; }
+      .caja-cont-qs .vision .vision-description {
+        text-align: left;
+        justify-content: left; }
+        .caja-cont-qs .vision .vision-description h3 {
+          font-size: 20px;
+          margin: 5px;
+          text-align: left;
+          font-weight: 700; }
+        .caja-cont-qs .vision .vision-description p {
+          font-size: 16px;
+          text-align: justify; }
+    .caja-cont-qs .valores {
+      display: block; }
+      .caja-cont-qs .valores img {
+        width: 100%; }
+      .caja-cont-qs .valores .valores-description h3 {
+        font-size: 20px;
+        margin: 5px;
+        text-align: left;
+        font-weight: 700; }
+      .caja-cont-qs .valores .valores-description p {
+        font-size: 16px;
+        text-align: justify; }
+  /*TERAPIAS*/
+  .hero-terapias h1 {
+    font-size: 60px; }
+  .galeria-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 100%;
+    grid-auto-rows: 350px;
+    gap: 10px;
+    grid-template-areas: "le-1" "le-2" "r-1" "te1"; }
+    .galeria-grid div h3 {
+      position: absolute;
+      bottom: 0;
+      color: #ffffff;
+      background-color: rgba(0, 0, 0, 0.644);
+      width: 100%;
+      padding: 5px;
+      font-family: "Roboto";
+      font-size: 1rem; }
+  /*PRODUCTOS*/
+  .hero-productos h1 {
+    font-size: 50px; }
+  .productos-description .talleres {
+    width: 100%;
+    margin-left: 4px;
+    align-items: center;
+    justify-content: center; }
+  .contacto h1 {
+    font-size: 60px;
+    margin: 10px; }
+  .contacto p {
+    font-size: 16px;
+    margin: 10px; }
+  .hero-galeria h1 {
+    font-size: 60px; }
+  footer .cont-foot {
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 0; }
+    footer .cont-foot i {
+      font-size: 18px;
+      color: blueviolet; }
+  main i {
+    font-size: 30px; } }

@@ -1,16 +1,16 @@
 footer{
     .cont-foot {
-        display: flex;
+        display: $dpf;
         background-color: rgb(217, 199, 241);
         font-size: 20px;
         padding: 20px;
         align-items: end;
         justify-content: space-between;
-        font-family: "Roboto";
+        font-family: $ffp;
         margin-top: 110px;
         i{
             font-size: 40px;
-            color: blueviolet;
+            color: $footicon;
         }
     }
 }

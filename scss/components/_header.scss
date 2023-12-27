@@ -2,7 +2,7 @@ header {
     nav {
         width: 100%;
         height: 100px;
-        background-color: rgba(170, 127, 255, 0.341);
+        background-color: $color-ppal;
 
         a.enlace {
             position: absolute;
@@ -13,7 +13,7 @@ header {
             width: 80px;
             height: 80px;
             position: sticky;
-            display: flex;
+            display: $dpf;
             justify-content: start;
             align-items: center;
             margin-left: 10px;
@@ -21,7 +21,7 @@ header {
         }
 
         #btn-menu {
-            display: none;
+            display: $dpn;
         }
 
         .hamb {
@@ -30,7 +30,7 @@ header {
             line-height: 80px;
             margin-right: 20px;
             cursor: pointer;
-            display: none;
+            display: $dpn;
         }
 
         ul {
@@ -47,11 +47,11 @@ header {
                     text-decoration: none;
                     display: flex;
                     justify-content: space-evenly;
-                    color: blueviolet;
+                    color: rgb(138, 43, 226);
                     font-size: 20px;
                     position: sticky;
                     margin-right: 20px;
-                    font-family: "Roboto";
+                    font-family: $ffp;
                     align-items: center;
                     justify-content: center;
                     

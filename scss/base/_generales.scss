@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Glass+Antiqua&family=Roboto:wght@300&display=swap");
 
+
 * {
     margin: 0px;
     padding: 0px;
@@ -7,13 +8,13 @@
 }
 
 h1 {
-    display: block;
+    display: $dpb;
     text-align: center;
     justify-content: center;
     align-items: center;
-    font-size: 100px;
-    font-family: "Glass Antiqua";
-    color: rgb(77, 0, 128);
+    font-size: $fsh1;
+    font-family: $ffh1;
+    color: $color-h1;
     font-weight: 900;
 }
 
@@ -21,24 +22,24 @@ p {
     font-size: 16px;
     font-weight: 500;
     text-align: center;
-    color: rgb(128, 83, 224);
-    font-family: "Roboto";
+    color: $color-p;
+    font-family: $ffp;
     margin: 5px;
-    display: flex;
+    display: $dpf;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .botone {
-    font-size: 16px;
-    background-color: rgb(203, 182, 232);
+    font-size: $fsb;
+    background-color: $color-botone;
     color: rgb(52, 12, 90);
     border: 3px;
     border-radius: 3px;
     cursor: pointer;
     text-decoration: none;
-    display: flex;
+    display: $dpf;
     margin: 10px;
     padding: 10px;
     align-items: center;
@@ -49,13 +50,13 @@ p {
     font-family: "Roboto";
 
     &:hover {
-        background-color: rgb(181, 139, 221);
+        background-color: $color-bg;
     }
 }
 
 main i {
     font-size: 50px;
-    background-color: #25d366;
+    background-color: $color-wapp;
     color: #ffffff;
     padding: 5px;
     border-radius: 50%;
@@ -65,7 +66,7 @@ main i {
 }
 .galeria-grid{
     width: 100%;
-    display: grid;
+    display: $dpg;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 350px;
     gap: 5px;
@@ -84,11 +85,11 @@ main i {
             position: absolute;
             bottom: 0;
             color: #ffffff;
-            background-color: rgba(0, 0, 0, 0.644);
+            background-color: $colorh3;
             width: 90%;
             padding: 5px;
             font-family: "Roboto";
-            font-size: 1rem;
+            font-size: $fsh3;
         }
         .le-1{
             grid-column: span 1;

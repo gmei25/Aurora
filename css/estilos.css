@@ -73,7 +73,7 @@ main i {
       position: absolute;
       bottom: 0;
       color: #ffffff;
-      background-color: rgba(0, 0, 0, 0.644);
+      background-color: rgba(0, 0, 0, 0.747);
       width: 90%;
       padding: 5px;
       font-family: "Roboto";
@@ -177,7 +177,7 @@ main {
     font-size: 60px;
     text-align: center;
     font-family: "Roboto";
-    color: #4d0080;
+    color: blueviolet;
     margin-top: 2rem; }
   main .blog .p3 {
     display: block;
@@ -212,14 +212,14 @@ main {
       main .cajas .caja-cont .caja h3 {
         font-size: 28px;
         font-weight: bold;
-        color: #4d0080;
+        color: blueviolet;
         margin: 2px;
         padding: 2px;
         font-family: "Roboto";
         text-align: center; }
   main .contacto p {
     font-size: 20px;
-    color: #4d0080;
+    color: blueviolet;
     font-family: "Roboto";
     display: flex;
     text-align: center;
@@ -283,7 +283,7 @@ main {
         background-color: #b58bdd; }
 
 .caja-cont-qs {
-  display: flex;
+  display: "Roboto";
   width: 90%;
   height: auto;
   margin: 0 auto;

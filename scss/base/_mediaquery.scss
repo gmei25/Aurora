@@ -55,7 +55,7 @@
 
             .mision-description {
                 h3 {
-                    font-weight: 700;
+                    font-weight: $fw800;
                 }
 
                 p {
@@ -106,7 +106,7 @@
             }
 
             .hamb {
-                display: block;
+                display: $dpb;
                 color: $footicon;
                 margin-top: 10px;
             }
@@ -121,7 +121,7 @@
                 height: 100vh;
                 background: rgb(217, 199, 241);
                 top: 80px;
-                left: -100%;
+                left: 100%;
                 text-align: center;
                 transition: all 0.5s;
                 z-index: 1 !important;
@@ -152,7 +152,7 @@
         a {
             text-decoration: none;
             color: rgb(138, 43, 226);
-            font-family: "Roboto";
+            font-family: $ffp;
             background-color: rgb(217, 199, 241);
             border-radius: 3px;
             padding: 5px;
@@ -166,7 +166,7 @@
         }
 
         p {
-            font-weight: 800;
+            font-weight: $fw800;
         }
     }
 
@@ -227,7 +227,7 @@
     }
 
     .productos-description {
-        display: block;
+        display: $dpb;
         align-items: center;
         justify-content: center;
 
@@ -241,7 +241,7 @@
                 height: 50%;
                 width: 80%;
                 margin-left: 50px;
-                display: flex;
+                display: $dpf;
                 align-items: center;
                 justify-content: center;
             }
@@ -251,7 +251,19 @@
                 margin-left: 50px;
                 margin-bottom: 50px;
                 margin-top: 15px;
+                &:hover {
+                    background: radial-gradient(circle, rgba(203,182,232,1) 0%, rgba(77,0,128,1) 100%);
+                    color: $colorw;
+                    font-weight: $fw800;
+                }
             }
+        }
+    }
+    .botone{
+        &:hover {
+            background: radial-gradient(circle, rgba(203,182,232,1) 0%, rgba(77,0,128,1) 100%);
+            color: $colorw;
+            font-weight: $fw800;
         }
     }
 }
@@ -286,7 +298,7 @@
                 h3 {
                     font-size: 20px;
                     margin: 5px;
-                    font-weight: 700;
+                    font-weight: $fw800;
                     text-align: left;
                 }
 
@@ -328,7 +340,7 @@
                 width: 100%;
             }
 
-            display: block;
+            display: $dpb;
 
             .valores-description {
                 h3 {
@@ -354,7 +366,7 @@
     }
 
     .galeria-grid {
-        display: grid;
+        display: $dpg;
         width: 100%;
         grid-template-columns: 100%;
         grid-auto-rows: 350px;

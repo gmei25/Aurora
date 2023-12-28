@@ -47,7 +47,7 @@ header {
                     text-decoration: none;
                     display: flex;
                     justify-content: space-evenly;
-                    color: rgb(138, 43, 226);
+                    color: $color-h1;
                     font-size: 20px;
                     position: sticky;
                     margin-right: 20px;
@@ -58,7 +58,7 @@ header {
                     &:active,
                     &:hover{
                         text-decoration: wavy underline;
-                        transition: 0.5s; 
+                        transition: 0.2s; 
                         color: white; 
                     }
                 }

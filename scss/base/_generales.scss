@@ -22,7 +22,7 @@ p {
     font-size: 16px;
     font-weight: 500;
     text-align: center;
-    color: $color-p;
+    color: $color-h1;
     font-family: $ffp;
     margin: 5px;
     display: $dpf;
@@ -47,17 +47,20 @@ p {
     box-shadow: 7px 8px 400px 40px rgba(80, 36, 125, 0.75);
     -webkit-box-shadow: 7px 8px 400px 40px rgba(80, 36, 125, 0.75);
     -moz-box-shadow: 7px 8px 400px 40px rgba(80, 36, 125, 0.75);
-    font-family: "Roboto";
+    font-family: $ffp;
+    
 
     &:hover {
-        background-color: $color-bg;
+        background: radial-gradient(circle, rgba(203,182,232,1) 0%, rgba(77,0,128,1) 100%);
+        color: $colorw;
+        font-weight: $fw800;
     }
 }
 
 main i {
     font-size: 50px;
     background-color: $color-wapp;
-    color: #ffffff;
+    color: $colorw;
     padding: 5px;
     border-radius: 50%;
     position: fixed;
@@ -84,7 +87,7 @@ main i {
         h3{
             position: absolute;
             bottom: 0;
-            color: #ffffff;
+            color: $colorw;
             background-color: $colorh3;
             width: 90%;
             padding: 5px;

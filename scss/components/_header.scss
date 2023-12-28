@@ -57,8 +57,9 @@ header {
                     
                     &:active,
                     &:hover{
-                        text-decoration: line-through;
+                        text-decoration: wavy underline;
                         transition: 0.5s; 
+                        color: white; 
                     }
                 }
             }

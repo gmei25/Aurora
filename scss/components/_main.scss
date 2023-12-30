@@ -18,7 +18,7 @@ main {
             color: $h1ppal;
             font-weight: $fwh1;
             animation-duration: 2s;
-            transition-timing-function: ease-in-out;
+            transition: 5s;
             animation-name: slidein;
             @keyframes slidein {
             from {

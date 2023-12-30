@@ -162,7 +162,7 @@ main {
       color: #d281f8;
       font-weight: 900;
       animation-duration: 2s;
-      transition-timing-function: ease-in-out;
+      transition: 5s;
       animation-name: slidein; }
 
 @keyframes slidein {

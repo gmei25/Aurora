@@ -162,8 +162,8 @@ main {
       color: #d281f8;
       font-weight: 900;
       animation-duration: 2s;
-      animation-name: slidein;
-      transition-duration: 3s; }
+      transition-timing-function: ease-in-out;
+      animation-name: slidein; }
 
 @keyframes slidein {
   from {
@@ -173,7 +173,7 @@ main {
     margin-left: 0%;
     width: 100%; } }
       main .hero h1:hover {
-        scale: 2; }
+        scale: 1.5; }
     main .hero p {
       font-size: 20px;
       font-weight: 800;
@@ -226,9 +226,10 @@ main {
       box-shadow: 2px 6px 5px 0px rgba(151, 112, 153, 0.5);
       -webkit-box-shadow: 2px 6px 5px 0px rgba(151, 112, 153, 0.5);
       -moz-box-shadow: 2px 6px 5px 0px rgba(151, 112, 153, 0.5);
-      transition-duration: 5s; }
+      transition-duration: 3s; }
       main .cajas .caja-cont .caja:hover {
-        scale: 1.3; }
+        scale: 1.3;
+        box-shadow: 0 0 10px purple; }
       main .cajas .caja-cont .caja img {
         width: 350px;
         height: 250px;
@@ -414,9 +415,10 @@ main {
       height: 80%;
       width: 100%;
       transition-duration: 3s;
-      transition-timing-function: ease-in-out; }
+      transition-timing-function: 2s ease-in-out; }
       .productos-description .talleres img:hover {
-        scale: 1.2; }
+        scale: 1.2;
+        box-shadow: 0 0 10px purple; }
 
 footer .cont-foot {
   display: flex;
@@ -482,7 +484,7 @@ footer .cont-foot {
       height: 400px;
       padding: 15px; } }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 1030px) {
   header nav {
     justify-items: center;
     align-items: center;
@@ -533,7 +535,7 @@ footer .cont-foot {
     .hero p {
       font-weight: 800; }
   h1 {
-    font-size: 80px; }
+    font-size: 100px; }
   p {
     font-size: 16px; }
   /*QUIENES SOMOS*/
@@ -579,13 +581,11 @@ footer .cont-foot {
         .productos-description .talleres .botone:hover {
           background: radial-gradient(circle, #cbb6e8 0%, #4d0080 100%);
           color: #ffffff;
-          font-weight: 800; }
-  .botone:hover {
-    background: radial-gradient(circle, #cbb6e8 0%, #4d0080 100%);
-    color: #ffffff;
-    font-weight: 800; } }
+          font-weight: 800; } }
 
 @media screen and (max-width: 770px) {
+  nav {
+    width: 100%; }
   .hero-qs {
     width: 100%; }
     .hero-qs h1 {
@@ -677,7 +677,53 @@ footer .cont-foot {
     width: 100%;
     margin-bottom: 0; }
     footer .cont-foot i {
-      font-size: 18px;
+      font-size: 20px;
       color: blueviolet; }
   main i {
     font-size: 30px; } }
+
+@media screen and (max-width: 430px) {
+  header nav {
+    justify-items: center;
+    align-items: center;
+    width: 100%; }
+    header nav .logo {
+      width: 50px;
+      height: 00px;
+      margin: 10px;
+      padding: 2.5px; }
+  .hero h1 {
+    font-size: 80px; }
+  .hero p {
+    font-size: 16px; }
+  .hero .boton {
+    font-size: 16px;
+    text-transform: uppercase; }
+    .hero .boton:hover {
+      background: radial-gradient(circle, #cbb6e8 0%, #4d0080 100%);
+      color: #ffffff;
+      font-weight: 800; } }
+
+@media screen and (max-width: 380px) {
+  main section.hero h1 {
+    font-size: 60px; }
+  main section.hero p {
+    font-size: 16px; }
+  main section.blog h2 {
+    font-size: 25px;
+    margin-top: 1rem; }
+  main section.blog .p3 {
+    font-size: 16px;
+    margin: 5px; }
+  main section.cajas div.caja-cont div.caja img {
+    width: 100%; }
+  main section.cajas div.caja-cont div.caja h3 {
+    font-size: 18px; }
+  main section.cajas div.caja-cont div.caja p {
+    font-size: 14px; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero h1 {
+    transition: none; }
+  .productos-description .talleres img {
+    transition: none; } }

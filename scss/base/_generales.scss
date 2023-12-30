@@ -48,14 +48,12 @@ p {
     -webkit-box-shadow: 7px 8px 400px 40px rgba(80, 36, 125, 0.75);
     -moz-box-shadow: 7px 8px 400px 40px rgba(80, 36, 125, 0.75);
     font-family: $ffp;
-    
-
-    &:hover {
-        background: radial-gradient(circle, rgba(203,182,232,1) 0%, rgba(77,0,128,1) 100%);
-        color: $colorw;
-        font-weight: $fw800;
+        &:hover {
+            background: radial-gradient(circle, rgba(203, 182, 232, 1) 0%, rgba(77, 0, 128, 1) 100%);
+            color: $colorw;
+            font-weight: $fw800;
+        }
     }
-}
 
 main i {
     font-size: 50px;

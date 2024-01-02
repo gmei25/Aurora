@@ -177,7 +177,7 @@ main {
     main .hero p {
       font-size: 20px;
       font-weight: 800;
-      color: #cbb6e8;
+      color: white;
       font-family: "Roboto";
       display: flex;
       text-align: center;

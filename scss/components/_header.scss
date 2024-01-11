@@ -20,6 +20,16 @@ header {
             margin-top: 10px;
         }
 
+        h1 {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px;
+            margin-left: 90px;
+            margin-top: 30px;
+            padding: 5px;
+        }
+
         #btn-menu {
             display: $dpn;
         }
@@ -54,12 +64,14 @@ header {
                     font-family: $ffp;
                     align-items: center;
                     justify-content: center;
-                    
+                    font-weight: 500;
+
                     &:active,
-                    &:hover{
-                        text-decoration: wavy underline;
-                        transition: 0.2s; 
-                        color: white; 
+                    &:hover {
+                        text-decoration: underline;
+                        transition: 0.1s;
+                        color: white;
+                        scale: 1.3;
                     }
                 }
             }

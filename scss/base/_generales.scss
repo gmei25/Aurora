@@ -16,6 +16,7 @@ h1 {
     font-family: $ffh1;
     color: $color-h1;
     font-weight: 900;
+    margin: 40px;
 }
 
 p {
@@ -24,23 +25,24 @@ p {
     text-align: center;
     color: $color-h1;
     font-family: $ffp;
-    margin: 5px;
     display: $dpf;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 10px;
+
 }
 
 .botone {
     font-size: $fsb;
     background-color: $color-botone;
     color: rgb(52, 12, 90);
-    border: 3px;
+    border: 1px rgb(179, 148, 223) solid;
     border-radius: 3px;
     cursor: pointer;
     text-decoration: none;
     display: $dpf;
-    margin: 10px;
+    margin: 5px;
     padding: 10px;
     align-items: center;
     justify-content: center;
@@ -48,12 +50,13 @@ p {
     -webkit-box-shadow: 7px 8px 400px 40px rgba(80, 36, 125, 0.75);
     -moz-box-shadow: 7px 8px 400px 40px rgba(80, 36, 125, 0.75);
     font-family: $ffp;
-        &:hover {
-            background: radial-gradient(circle, rgba(203, 182, 232, 1) 0%, rgba(77, 0, 128, 1) 100%);
-            color: $colorw;
-            font-weight: $fw800;
-        }
+
+    &:hover {
+        background: radial-gradient(circle, rgba(203, 182, 232, 1) 0%, rgba(77, 0, 128, 1) 100%);
+        color: $colorw;
+        font-weight: $fw800;
     }
+}
 
 main i {
     font-size: 50px;
@@ -65,47 +68,52 @@ main i {
     bottom: 60px;
     right: 30px;
 }
-.galeria-grid{
-    width: 100%;
+
+.galeria-grid {
     display: $dpg;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 350px;
-    gap: 5px;
-    grid-template-areas:
-    "le-1 le-2 le-2"
-    "r-1 r-1 te1"
-    ;
-        div{
+    place-content: center;
+    width: 100%;
+    height: 610px;
+    justify-content: space-evenly;
+    grid-template-columns: 450px 450px 450px 450px;
+    grid-template-rows: 350px;
+    grid-gap: 15px;
+
+    div {
         position: relative;
-        img{
+
+        img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        h3{
+
+        h3 {
             position: absolute;
             bottom: 0;
             color: $colorw;
             background-color: $colorh3;
-            width: 90%;
+            width: 100%;
             padding: 5px;
             font-family: "Roboto";
             font-size: $fsh3;
         }
-        .le-1{
-            grid-column: span 1;
-            grid-area: le-1;
+
+        .le-1 {
+            grid-column: 1 / 2;
         }
-        .le-2{
-            grid-column: span 2;
-            grid-area: le-2;
+
+        .le-2 {
+            grid-column: 2/4;
         }
-        .r-1{
+
+        .r-1 {
             grid-row: span 3;
             grid-column: span 2;
             grid-area: r-1;
         }
-        .te1{
+
+        .te1 {
             grid-column: span 1;
             grid-row: span 1;
             grid-area: te1;

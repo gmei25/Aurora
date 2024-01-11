@@ -9,10 +9,11 @@ h1 {
   text-align: center;
   justify-content: center;
   align-items: center;
-  font-size: 100px;
+  font-size: 60px;
   font-family: "Glass Antiqua";
   color: #4d0080;
-  font-weight: 900; }
+  font-weight: 900;
+  margin: 40px; }
 
 p {
   font-size: 16px;
@@ -20,22 +21,22 @@ p {
   text-align: center;
   color: #4d0080;
   font-family: "Roboto";
-  margin: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  padding: 10px; }
 
 .botone {
   font-size: 16px;
   background-color: #cbb6e8;
   color: #340c5a;
-  border: 3px;
+  border: 1px #b394df solid;
   border-radius: 3px;
   cursor: pointer;
   text-decoration: none;
   display: flex;
-  margin: 10px;
+  margin: 5px;
   padding: 10px;
   align-items: center;
   justify-content: center;
@@ -59,12 +60,14 @@ main i {
   right: 30px; }
 
 .galeria-grid {
-  width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 350px;
-  gap: 5px;
-  grid-template-areas: "le-1 le-2 le-2" "r-1 r-1 te1"; }
+  place-content: center;
+  width: 100%;
+  height: 610px;
+  justify-content: space-evenly;
+  grid-template-columns: 450px 450px 450px 450px;
+  grid-template-rows: 350px;
+  grid-gap: 15px; }
   .galeria-grid div {
     position: relative; }
     .galeria-grid div img {
@@ -76,16 +79,14 @@ main i {
       bottom: 0;
       color: #ffffff;
       background-color: rgba(0, 0, 0, 0.747);
-      width: 90%;
+      width: 100%;
       padding: 5px;
       font-family: "Roboto";
-      font-size: 1rem; }
+      font-size: 20px; }
     .galeria-grid div .le-1 {
-      grid-column: span 1;
-      grid-area: le-1; }
+      grid-column: 1 / 2; }
     .galeria-grid div .le-2 {
-      grid-column: span 2;
-      grid-area: le-2; }
+      grid-column: 2/4; }
     .galeria-grid div .r-1 {
       grid-row: span 3;
       grid-column: span 2;
@@ -111,6 +112,14 @@ header nav {
     align-items: center;
     margin-left: 10px;
     margin-top: 10px; }
+  header nav h1 {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    margin-left: 90px;
+    margin-top: 30px;
+    padding: 5px; }
   header nav #btn-menu {
     display: none; }
   header nav .hamb {
@@ -138,65 +147,53 @@ header nav {
         margin-right: 20px;
         font-family: "Roboto";
         align-items: center;
-        justify-content: center; }
+        justify-content: center;
+        font-weight: 500; }
         header nav ul li a:active, header nav ul li a:hover {
-          text-decoration: wavy underline;
-          transition: 0.2s;
-          color: white; }
+          text-decoration: underline;
+          transition: 0.1s;
+          color: white;
+          scale: 1.3; }
 
 main {
-  /*INDEX*/ }
+  /*INDEX*/
+  /*QUIENES SOMOS*/ }
   main .hero {
-    display: inline-block;
+    display: flex;
     box-sizing: border-box;
-    background-image: url(../img/espaciovic.webp);
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../img/espaciovic.webp);
     text-align: center;
+    justify-content: center;
+    align-items: center;
     color: #d6cbf0;
     width: 100%;
     height: 25rem;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; }
-    main .hero h1 {
-      color: #d281f8;
-      font-weight: 900;
-      animation-duration: 2s;
-      transition: 5s;
-      animation-name: slidein; }
-
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%; }
-  to {
-    margin-left: 0%;
-    width: 100%; } }
-      main .hero h1:hover {
-        scale: 1.5; }
+    background-attachment: fixed;
+    flex-direction: column; }
     main .hero p {
-      font-size: 20px;
+      font-size: 16px;
       font-weight: 800;
       color: white;
       font-family: "Roboto";
       display: flex;
       text-align: center;
       justify-content: center;
-      margin: 30px;
+      margin: 15px;
       text-transform: uppercase; }
-  main .boton {
-    text-decoration: none;
-    color: white;
-    font-family: "Roboto";
-    font-size: 18px;
-    text-align: center;
-    color: #ffffff; }
-    main .boton:hover {
-      background: #cbb6e8;
-      background: radial-gradient(circle, #cbb6e8 0%, #4d0080 100%); }
+    main .hero .botone {
+      width: 20%;
+      display: inline-block;
+      transition: 0.2s; }
+      main .hero .botone:hover {
+        background: #a945c7;
+        box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+        transition-delay: 1s; }
   main .blog h2 {
     display: block;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 800;
     text-align: center;
     font-family: "Roboto";
@@ -209,41 +206,42 @@ main {
     color: #4d0080;
     font-family: "Roboto";
     margin: 20px; }
-  main .cajas .caja-cont {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    font-family: "Roboto"; }
-    main .cajas .caja-cont .caja {
-      background-color: #d9c7f1;
-      min-width: 200px;
-      max-width: 400px;
-      height: 500px;
-      margin: 20px;
-      padding: 20px;
-      border: #9892af solid 2px;
-      box-shadow: 2px 6px 5px 0px rgba(151, 112, 153, 0.5);
-      -webkit-box-shadow: 2px 6px 5px 0px rgba(151, 112, 153, 0.5);
-      -moz-box-shadow: 2px 6px 5px 0px rgba(151, 112, 153, 0.5);
-      transition-duration: 3s; }
-      main .cajas .caja-cont .caja:hover {
-        scale: 1.3;
-        box-shadow: 0 0 10px purple; }
-      main .cajas .caja-cont .caja img {
-        width: 350px;
-        height: 250px;
-        padding: 10px;
-        display: inline-block;
-        align-items: center; }
-      main .cajas .caja-cont .caja h3 {
-        font-size: 28px;
-        font-weight: bold;
-        color: blueviolet;
-        margin: 2px;
-        padding: 2px;
-        font-family: "Roboto";
-        text-align: center; }
+  main .cajas {
+    height: auto; }
+    main .cajas .caja-cont {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      font-family: "Roboto"; }
+      main .cajas .caja-cont .caja {
+        background-color: #d9c7f1;
+        max-width: 400px;
+        height: 500px;
+        margin: 10px;
+        padding: 20px;
+        border: #9892af solid 2px;
+        transition-duration: 1s; }
+        main .cajas .caja-cont .caja:hover {
+          scale: 1.05;
+          box-shadow: 0 0 10px #9892af; }
+        main .cajas .caja-cont .caja img {
+          width: 100%;
+          height: 260px;
+          padding: 5px;
+          display: block;
+          align-items: center;
+          justify-content: center; }
+        main .cajas .caja-cont .caja h3 {
+          font-size: 20px;
+          font-weight: bold;
+          color: blueviolet;
+          margin: 2px;
+          padding: 2px;
+          font-family: "Roboto";
+          text-align: center; }
+  main .contacto h1 {
+    margin: 3px; }
   main .contacto p {
     font-size: 20px;
     color: blueviolet;
@@ -251,190 +249,234 @@ main {
     display: flex;
     text-align: center;
     justify-content: center;
-    margin: 30px; }
-  main .formulario {
+    margin: 4px; }
+  main .contacto-contenedor {
     display: flex;
     justify-content: center;
-    text-align: left;
-    padding: 20px;
-    font-family: "Roboto";
-    flex-direction: column;
-    margin: auto;
-    margin-bottom: 30px;
-    width: 90%;
-    max-width: 400px;
-    background-color: #d9c7f1;
-    height: 500px;
-    border: #9892af solid 2px;
-    box-shadow: 2px 6px 5px 0px rgba(151, 112, 153, 0.5);
-    -webkit-box-shadow: 2px 6px 5px 0px rgba(151, 112, 153, 0.5);
-    -moz-box-shadow: 2px 6px 5px 0px rgba(151, 112, 153, 0.5);
-    border-radius: 5px; }
-    main .formulario label {
-      color: #a264ed;
-      font-size: 20px;
-      font-weight: 600px;
-      margin-bottom: 10px; }
-    main .formulario input {
-      justify-content: flex-start; }
-    main .formulario input,
-    main .formulario textarea {
-      padding: 10px;
-      border-radius: 1px;
-      margin-bottom: 10px;
-      background-color: #e8d9f8;
-      border: 1px solid #b56df0;
-      text-align: left;
-      font-family: "Roboto"; }
-      main .formulario input::placeholder,
-      main .formulario textarea::placeholder {
-        color: gray; }
-    main .formulario .botone {
-      font-size: 16px;
-      background-color: #cbb6e8;
-      color: #340c5a;
-      border: 3px;
-      border-radius: 3px;
-      cursor: pointer;
-      text-decoration: none;
+    align-items: center; }
+    main .contacto-contenedor .formulario {
       display: flex;
-      margin: 10px;
-      padding: 10px;
+      justify-content: left;
+      text-align: left;
+      padding: 20px;
+      font-family: "Roboto";
+      flex-direction: column;
+      width: 90%;
+      max-width: 400px;
+      background-color: #d9c7f1;
+      height: 500px;
+      border: #9892af solid 2px;
+      box-shadow: 2px 6px 5px 0px rgba(151, 112, 153, 0.5);
+      -webkit-box-shadow: 2px 6px 5px 0px rgba(151, 112, 153, 0.5);
+      -moz-box-shadow: 2px 6px 5px 0px rgba(151, 112, 153, 0.5);
+      border-radius: 5px; }
+      main .contacto-contenedor .formulario label {
+        color: #a264ed;
+        font-size: 20px;
+        font-weight: 600px;
+        margin-bottom: 10px; }
+      main .contacto-contenedor .formulario input {
+        justify-content: flex-start; }
+      main .contacto-contenedor .formulario input,
+      main .contacto-contenedor .formulario textarea {
+        padding: 10px;
+        border-radius: 1px;
+        margin-bottom: 10px;
+        background-color: #e8d9f8;
+        border: 1px solid #b56df0;
+        text-align: left;
+        font-family: "Roboto"; }
+        main .contacto-contenedor .formulario input::placeholder,
+        main .contacto-contenedor .formulario textarea::placeholder {
+          color: gray; }
+      main .contacto-contenedor .formulario .botone {
+        font-size: 16px;
+        background-color: #cbb6e8;
+        color: #340c5a;
+        border: 1px #b394df solid;
+        border-radius: 3px;
+        cursor: pointer;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: flex;
+        margin: 10px;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 7px 8px 400px 40px rgba(80, 36, 125, 0.75);
+        -webkit-box-shadow: 7px 8px 400px 40px rgba(80, 36, 125, 0.75);
+        -moz-box-shadow: 7px 8px 400px 40px rgba(80, 36, 125, 0.75);
+        font-family: "Roboto"; }
+        main .contacto-contenedor .formulario .botone:hover {
+          background: #cbb6e8;
+          background: radial-gradient(circle, #cbb6e8 0%, #4d0080 100%);
+          background: radial-gradient(circle, #cbb6e8 0%, #4d0080 100%);
+          color: #ffffff; }
+    main .contacto-contenedor .galeria {
       align-items: center;
       justify-content: center;
-      box-shadow: 7px 8px 400px 40px rgba(80, 36, 125, 0.75);
-      -webkit-box-shadow: 7px 8px 400px 40px rgba(80, 36, 125, 0.75);
-      -moz-box-shadow: 7px 8px 400px 40px rgba(80, 36, 125, 0.75);
-      font-family: "Roboto"; }
-      main .formulario .botone:hover {
-        background: #cbb6e8;
-        background: radial-gradient(circle, #cbb6e8 0%, #4d0080 100%);
-        background: radial-gradient(circle, #cbb6e8 0%, #4d0080 100%); }
-
-.caja-cont-qs {
-  display: "Roboto";
-  width: 90%;
-  height: auto;
-  margin: 0 auto;
-  color: #321c61;
-  font-size: 20px;
-  font-family: "Roboto";
-  padding: 10px;
-  flex-direction: column;
-  background-color: #d8b4fb; }
-  .caja-cont-qs .mision {
-    display: flex; }
-    .caja-cont-qs .mision img {
-      width: 80%;
-      height: 33.3%;
-      padding: 30px; }
-    .caja-cont-qs .mision .mision-description {
-      padding-inline: 16px; }
-      .caja-cont-qs .mision .mision-description h3 {
-        font-size: 30px;
+      max-width: 750px;
+      height: 100%;
+      padding: 20px; }
+      main .contacto-contenedor .galeria .slide {
+        border-radius: 5px; }
+        main .contacto-contenedor .galeria .slide img {
+          max-width: 100%;
+          height: 600px;
+          padding: 20px; }
+  main .hero-qs h1 {
+    margin: 3px; }
+  main .hero-qs p {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-left: 200px;
+    margin-right: 200px; }
+  main .caja-cont-qs {
+    display: block;
+    width: 68%;
+    height: auto;
+    margin: 0 auto;
+    color: #321c61;
+    font-family: "Roboto";
+    padding: 10px;
+    flex-direction: column;
+    background-color: #eadafa;
+    margin-bottom: 10px; }
+    main .caja-cont-qs .mision {
+      display: flex; }
+      main .caja-cont-qs .mision img {
+        width: 70%;
+        height: 33.3%;
+        padding: 5px; }
+      main .caja-cont-qs .mision .mision-description {
+        padding-inline: 16px;
+        padding-top: 70px; }
+        main .caja-cont-qs .mision .mision-description h3 {
+          font-size: 20px;
+          font-weight: 800;
+          color: #4d0080;
+          padding: 10px;
+          margin-top: 15px;
+          margin-bottom: 5px; }
+        main .caja-cont-qs .mision .mision-description p {
+          font-size: 16px;
+          align-content: center;
+          justify-content: left;
+          text-align: justify;
+          padding: 5px;
+          color: #4d0080; }
+    main .caja-cont-qs .vision {
+      display: flex; }
+      main .caja-cont-qs .vision img {
+        width: 80%;
+        height: 33.3%;
+        padding: 5px; }
+      main .caja-cont-qs .vision .vision-description {
+        order: -1;
+        padding-inline: 16px;
+        padding-top: 80px; }
+      main .caja-cont-qs .vision h3 {
+        font-size: 20px;
         font-weight: 800;
         color: #4d0080;
-        text-align: left;
+        text-align: right;
         display: block;
-        padding: 20px;
-        margin-top: 20px;
-        margin-bottom: 5px; }
-      .caja-cont-qs .mision .mision-description p {
+        margin-top: 15px;
+        margin-bottom: 5px;
+        margin-right: 10px; }
+      main .caja-cont-qs .vision p {
         font-size: 16px;
-        align-items: left;
-        justify-content: left;
-        padding: 5px;
-        color: #4d0080; }
-  .caja-cont-qs .vision {
-    display: flex; }
-    .caja-cont-qs .vision img {
-      width: 80%;
-      height: 33.3%;
-      padding: 10px;
-      padding: 30px; }
-    .caja-cont-qs .vision .vision-description {
-      order: -1;
-      padding-inline: 16px; }
-    .caja-cont-qs .vision h3 {
-      font-size: 30px;
-      font-weight: 800;
-      color: #4d0080;
-      text-align: right;
-      display: block;
-      margin-top: 20px;
-      margin-bottom: 20px; }
-    .caja-cont-qs .vision p {
-      font-size: 16px;
-      font-weight: 400;
-      font-family: "Roboto";
-      flex-direction: row;
-      align-items: right;
-      padding-top: 10px;
-      text-align: right;
-      color: #4d0080; }
-  .caja-cont-qs .valores {
-    display: flex; }
-    .caja-cont-qs .valores img {
-      width: 80%;
-      height: 33.3%;
-      padding: 30px; }
-    .caja-cont-qs .valores .valores-description {
-      padding-inline: 16px; }
-      .caja-cont-qs .valores .valores-description h3 {
-        font-size: 30px;
-        font-weight: 800;
-        font-family: "Roboto";
-        color: #4d0080;
-        text-align: left;
-        display: block;
-        margin-top: 20px;
-        margin-bottom: 10px; }
-      .caja-cont-qs .valores .valores-description ul li {
-        font-size: 18px;
+        font-weight: 400;
         font-family: "Roboto";
         flex-direction: row;
         align-items: right;
-        padding-top: 10px;
+        padding-top: 5px;
+        text-align: right;
         color: #4d0080; }
-
-.hero-productos {
-  display: block;
-  margin: 20px;
-  padding: 20px;
-  text-align: center; }
-
-.productos-description {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap; }
-  .productos-description .talleres {
-    width: 30%;
-    margin: 10px; }
-    .productos-description .talleres img {
-      height: 80%;
-      width: 100%;
-      transition-duration: 3s;
-      transition-timing-function: 2s ease-in-out; }
-      .productos-description .talleres img:hover {
-        scale: 1.2;
-        box-shadow: 0 0 10px purple; }
+    main .caja-cont-qs .valores {
+      display: flex; }
+      main .caja-cont-qs .valores img {
+        width: 80%;
+        height: 33.3%;
+        padding: 5px; }
+      main .caja-cont-qs .valores .valores-description {
+        padding-inline: 16px;
+        justify-content: center;
+        align-items: center;
+        padding-top: 40px; }
+        main .caja-cont-qs .valores .valores-description h3 {
+          font-size: 20px;
+          font-weight: 800;
+          font-family: "Roboto";
+          color: #4d0080;
+          text-align: left;
+          display: block;
+          margin-top: 20px;
+          margin-bottom: 10px; }
+        main .caja-cont-qs .valores .valores-description ul li {
+          font-size: 16px;
+          font-family: "Roboto";
+          flex-direction: row;
+          align-items: right;
+          padding-top: 10px;
+          color: #4d0080; }
+  main .hero-productos {
+    display: block;
+    padding: 5px;
+    text-align: center; }
+  main .productos-description {
+    display: flex;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+  main div.talleres {
+    padding: 5x;
+    display: inline-block;
+    width: 25%;
+    margin: 3px;
+    transition-duration: 2s;
+    transition-timing-function: 1s ease-in-out; }
+    main div.talleres:hover {
+      scale: 1.05; }
+    main div.talleres img {
+      height: 550px;
+      width: 85%; }
+      main div.talleres img:hover {
+        box-shadow: 0 0 10px blueviolet; }
+    main div.talleres .botone {
+      display: inline-block;
+      width: 83%; }
+      main div.talleres .botone:hover {
+        box-shadow: 0 0 10px blueviolet; }
 
 footer .cont-foot {
   display: flex;
   background-color: #d9c7f1;
   font-size: 20px;
-  padding: 20px;
+  padding: 15px;
   align-items: end;
   justify-content: space-between;
-  font-family: "Roboto";
-  margin-top: 110px; }
+  font-family: "Roboto"; }
   footer .cont-foot i {
-    font-size: 40px;
-    color: blueviolet; }
+    font-size: 30px;
+    color: blueviolet;
+    transition: 1s; }
+    footer .cont-foot i:hover {
+      transform: scale 1.2; }
 
 /*MEDIA QUERIES*/
 @media screen and (max-width: 1440px) {
+  header nav {
+    width: 100%; }
+    header nav ul {
+      align-items: center;
+      justify-content: center;
+      margin: 10px; }
+      header nav ul li a {
+        font-weight: 500; }
   .galeria-grid {
     grid-template-columns: repeat(3, 2fr);
     grid-auto-rows: 350px;
@@ -453,36 +495,41 @@ footer .cont-foot {
       grid-column: span 1;
       grid-row: span 1;
       grid-area: te1; }
-  .hero-qs p {
+  section.hero-qs p {
     font-size: 20px;
     align-items: center;
     justify-content: center;
-    margin: 30px;
-    padding: 10px; }
-  .caja-cont-qs {
-    width: 100%;
-    margin: 10px; }
-    .caja-cont-qs .mision img {
-      width: 50%;
-      height: 400px;
+    margin: 15px;
+    padding: 20px; }
+  section.caja-cont-qs {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: auto; }
+    section.caja-cont-qs .mision img {
+      width: 100%;
+      height: 350px;
       padding: 15px; }
-    .caja-cont-qs .mision .mision-description h3 {
+    section.caja-cont-qs .mision .mision-description h3 {
       font-weight: 800; }
-    .caja-cont-qs .mision .mision-description p {
+    section.caja-cont-qs .mision .mision-description p {
       text-align: left;
       font-size: 20px; }
-    .caja-cont-qs .vision img {
-      width: 50%;
-      height: 400px;
+    section.caja-cont-qs .vision img {
+      width: 100%;
+      height: 350px;
       padding: 15px; }
-    .caja-cont-qs .vision h3 {
-      margin-top: 30px; }
-    .caja-cont-qs .vision p {
+    section.caja-cont-qs .vision h3 {
+      margin-top: 20px; }
+    section.caja-cont-qs .vision p {
       font-size: 20px; }
-    .caja-cont-qs .valores img {
-      width: 50%;
-      height: 400px;
-      padding: 15px; } }
+    section.caja-cont-qs .valores img {
+      width: 100%;
+      height: 380px;
+      padding: 15px; }
+    section.caja-cont-qs .valores h3 {
+      margin-top: 10px; } }
 
 @media screen and (max-width: 1030px) {
   header nav {
@@ -494,6 +541,132 @@ footer .cont-foot {
       height: 70px;
       margin: 15px;
       padding: 5px; }
+  main {
+    /*QUIENES SOMOS*/
+    /*PRODUCTOS*/
+    /*CONTACTO*/ }
+    main section.hero {
+      color: #d6cbf0;
+      font-weight: 700; }
+      main section.hero a {
+        text-decoration: none;
+        color: blueviolet;
+        font-family: "Roboto";
+        background-color: #d9c7f1;
+        border-radius: 3px;
+        padding: 5px; }
+      main section.hero .botone {
+        display: flex; }
+        main section.hero .botone:hover {
+          background-color: blueviolet;
+          color: #d9c7f1; }
+      main section.hero p {
+        font-weight: 800;
+        font-size: 16px; }
+    main section.hero-qs h1 {
+      font-size: 60px; }
+    main section.hero-qs p {
+      font-size: 16px; }
+    main section.caja-cont-qs {
+      height: auto;
+      text-align: left;
+      margin-top: 5px; }
+      main section.caja-cont-qs div.mision {
+        margin: 10px; }
+        main section.caja-cont-qs div.mision img {
+          height: 350px;
+          width: 50%; }
+        main section.caja-cont-qs div.mision div.mision-description h3 {
+          font-size: 25px;
+          margin-bottom: 5px; }
+        main section.caja-cont-qs div.mision div.mision-description p {
+          font-size: 16px;
+          padding-top: 5px;
+          margin-bottom: 20px; }
+      main section.caja-cont-qs div.vision img {
+        height: 350px;
+        width: 50%; }
+      main section.caja-cont-qs div.vision div.vision-description {
+        align-items: center;
+        justify-content: center; }
+        main section.caja-cont-qs div.vision div.vision-description h3 {
+          font-size: 25px; }
+        main section.caja-cont-qs div.vision div.vision-description p {
+          font-size: 16px; }
+      main section.caja-cont-qs div.valores {
+        display: block; }
+        main section.caja-cont-qs div.valores img {
+          height: 500px;
+          width: 100%; }
+        main section.caja-cont-qs div.valores div.valores-description h3 {
+          font-size: 20px; }
+        main section.caja-cont-qs div.valores div.valores-description p {
+          font-size: 16px; }
+    main section.hero-productos {
+      margin: 5px;
+      padding: 5px; }
+    main section.productos-description {
+      display: block;
+      align-items: center;
+      justify-content: center; }
+      main section.productos-description div.talleres {
+        width: 33.3%;
+        margin-left: 50px;
+        justify-content: center;
+        align-items: center; }
+        main section.productos-description div.talleres img {
+          height: 50%;
+          width: 80%;
+          margin-left: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+        main section.productos-description div.talleres .botone {
+          width: 80%;
+          margin-left: 50px;
+          margin-bottom: 50px;
+          margin-top: 15px; }
+          main section.productos-description div.talleres .botone:hover {
+            background: radial-gradient(circle, #cbb6e8 0%, #4d0080 100%);
+            color: #ffffff;
+            font-weight: 800; }
+    main section.contacto h1 {
+      margin: 10px; }
+    main section.contacto p {
+      font-size: 16px; }
+    main section.formulario {
+      flex-direction: column;
+      margin: auto;
+      margin-bottom: 90px;
+      width: 90%;
+      max-width: 400px;
+      background-color: #d9c7f1;
+      height: 500px; }
+    main .contacto-contenedor .galeria {
+      max-width: 500px;
+      padding: 15px; }
+      main .contacto-contenedor .galeria .slide {
+        border-radius: 5px; }
+        main .contacto-contenedor .galeria .slide img {
+          max-width: 100%;
+          height: 500px;
+          padding: 15px; }
+  /*TERAPIAS*/
+  section.hero-terapias {
+    padding: 5px;
+    margin: 5px; }
+    section.hero-terapias h1 {
+      align-items: center;
+      justify-content: center;
+      padding: 5px; }
+  section.galeria-grid {
+    height: auto;
+    gap: 10px;
+    margin-bottom: 10px; } }
+
+@media screen and (max-width: 770px) {
+  header nav {
+    width: 100%; }
     header nav .hamb {
       display: block;
       color: blueviolet;
@@ -505,7 +678,7 @@ footer .cont-foot {
       width: 100%;
       height: 100vh;
       background: #d9c7f1;
-      top: 80px;
+      top: 90px;
       left: 100%;
       text-align: center;
       transition: all 0.5s;
@@ -519,131 +692,82 @@ footer .cont-foot {
           header nav ul li a:active, header nav ul li a:hover {
             text-decoration: line-through;
             transition: 0.5s; }
-  .hero {
-    color: #d6cbf0;
-    font-weight: 700; }
-    .hero a {
-      text-decoration: none;
-      color: blueviolet;
-      font-family: "Roboto";
-      background-color: #d9c7f1;
-      border-radius: 3px;
-      padding: 5px; }
-    .hero .boton:hover {
-      background-color: blueviolet;
-      color: #d9c7f1; }
-    .hero p {
-      font-weight: 800; }
-  h1 {
-    font-size: 100px; }
-  p {
-    font-size: 16px; }
-  /*QUIENES SOMOS*/
-  .caja-cont-qs .mision .mision-description h3 {
-    font-size: 25px;
-    margin: 15px; }
-  .caja-cont-qs .mision .mision-description p {
-    font-size: 16px;
-    padding-top: 10px; }
-  .caja-cont-qs .vision .vision-description h3 {
-    font-size: 25px; }
-  .caja-cont-qs .vision .vision-description p {
-    font-size: 16px; }
-  .caja-cont-qs .valores .valores-description h3 {
-    font-size: 25px; }
-  .caja-cont-qs .valores .valores-description p {
-    font-size: 16px; }
-  /*PRODUCTOS*/
-  .hero-productos {
-    margin: 5px;
-    padding: 5px; }
-  .productos-description {
-    display: block;
-    align-items: center;
-    justify-content: center; }
-    .productos-description .talleres {
-      width: 90%;
-      margin-left: 50px;
-      align-items: center;
-      justify-content: center; }
-      .productos-description .talleres img {
-        height: 50%;
-        width: 80%;
-        margin-left: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center; }
-      .productos-description .talleres .botone {
-        width: 80%;
-        margin-left: 50px;
-        margin-bottom: 50px;
-        margin-top: 15px; }
-        .productos-description .talleres .botone:hover {
-          background: radial-gradient(circle, #cbb6e8 0%, #4d0080 100%);
-          color: #ffffff;
-          font-weight: 800; } }
-
-@media screen and (max-width: 770px) {
-  nav {
+  main section.hero-qs {
     width: 100%; }
-  .hero-qs {
-    width: 100%; }
-    .hero-qs h1 {
-      font-size: 50px; }
-    .hero-qs p {
+    main section.hero-qs h1 {
+      font-size: 50px;
+      padding: 5px;
+      margin: 15px; }
+    main section.hero-qs p {
       font-size: 16px;
       padding: 5px;
-      margin: 5px; }
-  .caja-cont-qs {
-    width: 100%;
-    margin-left: 0; }
-    .caja-cont-qs .mision {
+      margin: 15px; }
+  main section.caja-cont-qs {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    main section.caja-cont-qs div.mision {
+      display: block;
+      height: 33.3%;
+      justify-content: space-around; }
+      main section.caja-cont-qs div.mision img {
+        width: 100%;
+        height: 450px;
+        padding: 25px; }
+      main section.caja-cont-qs div.mision .mision-description {
+        padding-top: 10px; }
+        main section.caja-cont-qs div.mision .mision-description h3 {
+          font-size: 30px;
+          padding: 5px;
+          font-weight: 800;
+          text-align: left; }
+        main section.caja-cont-qs div.mision .mision-description p {
+          font-size: 16px;
+          padding: 5px;
+          text-align: justify; }
+    main section.caja-cont-qs div.vision {
       display: block; }
-      .caja-cont-qs .mision img {
-        width: 100%; }
-      .caja-cont-qs .mision .mision-description h3 {
-        font-size: 20px;
-        margin: 5px;
-        font-weight: 800;
-        text-align: left; }
-      .caja-cont-qs .mision .mision-description p {
-        font-size: 16px;
-        padding-top: 5px;
-        text-align: justify; }
-    .caja-cont-qs .vision {
-      display: block; }
-      .caja-cont-qs .vision img {
-        width: 100%; }
-      .caja-cont-qs .vision .vision-description {
+      main section.caja-cont-qs div.vision img {
+        width: 100%;
+        height: 450px;
+        padding: 25px; }
+      main section.caja-cont-qs div.vision .vision-description {
+        padding-top: 10px;
         text-align: left;
         justify-content: left; }
-        .caja-cont-qs .vision .vision-description h3 {
-          font-size: 20px;
-          margin: 5px;
+        main section.caja-cont-qs div.vision .vision-description h3 {
+          font-size: 30px;
+          margin: 15px;
           text-align: left;
           font-weight: 700; }
-        .caja-cont-qs .vision .vision-description p {
+        main section.caja-cont-qs div.vision .vision-description p {
           font-size: 16px;
           text-align: justify; }
-    .caja-cont-qs .valores {
+    main section.caja-cont-qs .valores {
       display: block; }
-      .caja-cont-qs .valores img {
-        width: 100%; }
-      .caja-cont-qs .valores .valores-description h3 {
-        font-size: 20px;
-        margin: 5px;
-        text-align: left;
-        font-weight: 700; }
-      .caja-cont-qs .valores .valores-description p {
-        font-size: 16px;
-        text-align: justify; }
+      main section.caja-cont-qs .valores img {
+        width: 100%;
+        height: 450px;
+        padding: 25px; }
+      main section.caja-cont-qs .valores .valores-description {
+        padding-top: 10px; }
+        main section.caja-cont-qs .valores .valores-description h3 {
+          font-size: 30px;
+          margin: 15px;
+          text-align: left;
+          font-weight: 700; }
+        main section.caja-cont-qs .valores .valores-description p {
+          font-size: 16px;
+          text-align: justify; }
   /*TERAPIAS*/
   .hero-terapias h1 {
     font-size: 60px; }
   .galeria-grid {
     display: grid;
     width: 100%;
-    grid-template-columns: 100%;
+    height: auto;
+    grid-template-columns: 80%;
     grid-auto-rows: 350px;
     gap: 10px;
     grid-template-areas: "le-1" "le-2" "r-1" "te1"; }
@@ -658,18 +782,42 @@ footer .cont-foot {
       font-size: 1rem; }
   /*PRODUCTOS*/
   .hero-productos h1 {
-    font-size: 50px; }
-  .productos-description .talleres {
-    width: 100%;
-    margin-left: 4px;
+    font-size: 60px; }
+  main section.productos-description {
+    display: block;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    align-content: center;
+    margin-left: 10px; }
+    main section.productos-description div.talleres {
+      width: 80%;
+      justify-content: center;
+      align-items: center;
+      align-content: center; }
+      main section.productos-description div.talleres img {
+        width: 80%;
+        height: 550px; }
+      main section.productos-description div.talleres .botone {
+        width: 50%;
+        align-items: center;
+        justify-content: center; }
   .contacto h1 {
     font-size: 60px;
     margin: 10px; }
   .contacto p {
     font-size: 16px;
     margin: 10px; }
+  .contacto-contenedor {
+    margin: 10px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; }
+    .contacto-contenedor div.formulario {
+      width: 100%;
+      margin: 10px; }
+    .contacto-contenedor section.galeria {
+      width: 80%; }
   .hero-galeria h1 {
     font-size: 60px; }
   footer .cont-foot {
@@ -689,24 +837,93 @@ footer .cont-foot {
     width: 100%; }
     header nav .logo {
       width: 50px;
-      height: 00px;
+      height: 50px;
       margin: 10px;
       padding: 2.5px; }
   .hero h1 {
-    font-size: 80px; }
+    font-size: 60px; }
   .hero p {
     font-size: 16px; }
-  .hero .boton {
+  .hero .botone {
+    display: inline-block;
     font-size: 16px;
-    text-transform: uppercase; }
-    .hero .boton:hover {
+    text-transform: capitalize;
+    padding: 5px 150px;
+    position: relative;
+    letter-spacing: 4px;
+    text-align: center; }
+    .hero .botone:hover {
       background: radial-gradient(circle, #cbb6e8 0%, #4d0080 100%);
       color: #ffffff;
-      font-weight: 800; } }
+      font-weight: 800; }
+  .galeria-grid {
+    display: grid;
+    grid-template-columns: 90%; }
+  section.hero-productos h1 {
+    font-size: 45px; }
+  main section.caja-cont-qs {
+    padding: 2px; }
+    main section.caja-cont-qs div.mision img {
+      height: 350px;
+      width: 100%;
+      padding: 2px;
+      margin-bottom: 5px; }
+    main section.caja-cont-qs div.mision div.mision-description {
+      padding-top: 10px; }
+      main section.caja-cont-qs div.mision div.mision-description h3 {
+        margin-top: 5px;
+        font-size: 20px; }
+    main section.caja-cont-qs div.vision img {
+      height: 350px;
+      width: 100%;
+      padding: 2px;
+      margin-bottom: 5px; }
+    main section.caja-cont-qs div.vision div.vision-description {
+      padding-top: 10px; }
+      main section.caja-cont-qs div.vision div.vision-description h3 {
+        margin-top: 5px;
+        font-size: 20px; }
+    main section.caja-cont-qs div.valores img {
+      height: 350px;
+      width: 100%;
+      padding: 2px;
+      margin-bottom: 5px; }
+    main section.caja-cont-qs div.valores div.valores-description {
+      padding-top: 10px; }
+      main section.caja-cont-qs div.valores div.valores-description h3 {
+        margin-top: 5px;
+        font-size: 20px; }
+  main section.productos-description div.talleres {
+    display: block;
+    margin: 2px;
+    width: 95%;
+    align-items: center;
+    align-content: center;
+    align-self: center; }
+    main section.productos-description div.talleres img {
+      padding: 3px;
+      align-items: center;
+      justify-content: center;
+      margin-left: 20px;
+      width: 90%; }
+    main section.productos-description div.talleres .botone {
+      width: 85%;
+      margin-left: 10px;
+      align-items: center; }
+  main section.galeria {
+    display: none; } }
 
 @media screen and (max-width: 380px) {
+  header nav h1 {
+    font-size: 30px; }
+  section.hero-terapias h1 {
+    font-size: 45px; }
+  section.hero-productos h1 {
+    font-size: 45px; }
+  section.contacto h1 {
+    font-size: 45px; }
   main section.hero h1 {
-    font-size: 60px; }
+    font-size: 40px; }
   main section.hero p {
     font-size: 16px; }
   main section.blog h2 {
@@ -714,13 +931,74 @@ footer .cont-foot {
     margin-top: 1rem; }
   main section.blog .p3 {
     font-size: 16px;
-    margin: 5px; }
-  main section.cajas div.caja-cont div.caja img {
-    width: 100%; }
-  main section.cajas div.caja-cont div.caja h3 {
-    font-size: 18px; }
-  main section.cajas div.caja-cont div.caja p {
-    font-size: 14px; } }
+    margin: 10px; }
+  main section.hero p {
+    font-size: 14px; }
+  main section.hero a.botone {
+    display: flex;
+    font-size: 12px; }
+  main section.hero-qs h1 {
+    font-size: 45px; }
+  main section.caja-cont-qs div.mision img {
+    height: 250px; }
+  main section.caja-cont-qs div.mision div.mision-description {
+    padding-top: 10px; }
+    main section.caja-cont-qs div.mision div.mision-description h3 {
+      font-size: 18px;
+      padding: 5px; }
+    main section.caja-cont-qs div.mision div.mision-description p {
+      font-size: 14px; }
+  main section.caja-cont-qs div.vision img {
+    height: 250px; }
+  main section.caja-cont-qs div.vision div.vision-description {
+    padding-top: 10px; }
+    main section.caja-cont-qs div.vision div.vision-description h3 {
+      font-size: 18px;
+      padding: 5px; }
+    main section.caja-cont-qs div.vision div.vision-description p {
+      font-size: 14px; }
+  main section.caja-cont-qs div.valores {
+    padding-top: 10px; }
+    main section.caja-cont-qs div.valores img {
+      height: 250px; }
+    main section.caja-cont-qs div.valores div.valores-description h3 {
+      font-size: 18px;
+      padding: 5px; }
+    main section.caja-cont-qs div.valores div.valores-description p {
+      font-size: 14px; }
+  main p {
+    font-size: 14px; }
+  main .botone {
+    font-size: small; }
+  main section.productos-description {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-left: 2px; }
+    main section.productos-description div.talleres img {
+      height: 500px;
+      width: 90%; }
+    main section.productos-description div.talleres .botone {
+      width: 90%; }
+  footer div.cont-foot {
+    align-items: center; } }
+
+@media screen and (max-width: 320px) {
+  main section.cajas div.caja-cont div.caja {
+    height: 400px; }
+    main section.cajas div.caja-cont div.caja img {
+      width: 100%;
+      height: 200px; }
+    main section.cajas div.caja-cont div.caja h3 {
+      font-size: 14px; }
+    main section.cajas div.caja-cont div.caja p {
+      font-size: 13px;
+      padding: 2px;
+      text-align: justify; }
+    main section.cajas div.caja-cont div.caja .botone {
+      font-size: 12px;
+      padding: 2px; } }
 
 @media (prefers-reduced-motion: reduce) {
   .hero h1 {

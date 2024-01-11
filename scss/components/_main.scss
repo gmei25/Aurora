@@ -2,10 +2,12 @@ main {
 
     /*INDEX*/
     .hero {
-        display: inline-block;
+        display: $dpf;
         box-sizing: border-box;
-        background-image: url(../img/espaciovic.webp);
+        background: linear-gradient(rgba(0, 0, 0, 0.450), rgba(0, 0, 0, 0.450)), url(../img/espaciovic.webp);
         text-align: center;
+        justify-content: center;
+        align-items: center;
         color: rgb(214, 203, 240);
         width: 100%;
         height: 25rem;
@@ -13,59 +15,38 @@ main {
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
-
-        h1{
-            color: $h1ppal;
-            font-weight: $fwh1;
-            animation-duration: 2s;
-            transition: 5s;
-            animation-name: slidein;
-            @keyframes slidein {
-            from {
-            margin-left: 100%;
-            width: 300%;
-            }
-            to {
-              margin-left: 0%;
-              width: 100%;
-            }
-            }
-        
-            &:hover{
-                scale: (1.5);
-            }  
-        }
+        flex-direction: column;
 
         p {
-            font-size: 20px;
+            font-size: 16px;
             font-weight: $fw800;
             color: rgb(255, 255, 255);
             font-family: $ffp;
             display: $dpf;
             text-align: center;
             justify-content: center;
-            margin: 30px;
+            margin: 15px;
             text-transform: uppercase;
         }
-    }
 
-    .boton{
-        text-decoration: none;
-        color: rgb(255, 255, 255);
-        font-family: $ffp;
-        font-size: 18px;
-        text-align: center;
-        color: $colorw;
-        &:hover {
-            background: rgb(203,182,232);
-            background: radial-gradient(circle, rgba(203,182,232,1) 0%, rgba(77,0,128,1) 100%);
+        .botone {
+            width: 20%;
+            display: $dpib;
+            transition: 0.2s;
+
+            &:hover {
+                background: #a945c7;
+                box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7,
+                    0 0 80px #a945c7;
+                transition-delay: 1s;
+            }
         }
     }
 
     .blog {
         h2 {
-            display: block;
-            font-size: 60px;
+            display: $dpb;
+            font-size: $fsh2;
             font-weight: $fw800;
             text-align: center;
             font-family: $ffp;
@@ -84,40 +65,40 @@ main {
     }
 
     .cajas {
+        height: auto;
+
         .caja-cont {
             display: $dpf;
             justify-content: space-evenly;
             align-items: center;
             flex-wrap: wrap;
             font-family: $ffp;
-            
 
             .caja {
                 background-color: rgb(217, 199, 241);
-                min-width: 200px;
                 max-width: 400px;
                 height: 500px;
-                margin: 20px;
+                margin: 10px;
                 padding: 20px;
                 border: rgb(152, 146, 175) solid 2px;
-                box-shadow: 2px 6px 5px 0px rgba(151, 112, 153, 0.5);
-                -webkit-box-shadow: 2px 6px 5px 0px rgba(151, 112, 153, 0.5);
-                -moz-box-shadow: 2px 6px 5px 0px rgba(151, 112, 153, 0.5);
-                transition-duration: 3s;
-                &:hover{
-                    scale: 1.3;
-                    box-shadow: 0 0 10px purple;
+                transition-duration: 1s;
+
+                &:hover {
+                    scale: 1.05;
+                    box-shadow: 0 0 10px rgb(152, 146, 175);
                 }
+
                 img {
-                    width: 350px;
-                    height: 250px;
-                    padding: 10px;
-                    display: $dpib;
+                    width: 100%;
+                    height: 260px;
+                    padding: 5px;
+                    display: $dpb;
                     align-items: center;
+                    justify-content: center;
                 }
 
                 h3 {
-                    font-size: 28px;
+                    font-size: $fsh3;
                     font-weight: bold;
                     color: $footicon;
                     margin: 2px;
@@ -129,130 +110,176 @@ main {
         }
     }
 
-    .contacto{
-        p{
+    .contacto {
+        h1 {
+            margin: 3px;
+        }
+
+        p {
             font-size: 20px;
             color: $footicon;
             font-family: $ffp;
             display: $dpf;
             text-align: center;
             justify-content: center;
-            margin: 30px;
+            margin: 4px;
         }
     }
-    .formulario {
-        display: $dpf;
+
+    .contacto-contenedor {
+        display: flex;
         justify-content: center;
-        text-align: left;
-        padding: 20px;
-        font-family: $ffp;
-        flex-direction: column;
-        margin: auto;
-        margin-bottom: 30px;
-        width: 90%;
-        max-width: 400px;
-        background-color: rgb(217, 199, 241);
-        height: 500px;
-        border: rgb(152, 146, 175) solid 2px;
-        box-shadow: 2px 6px 5px 0px rgba(151, 112, 153, 0.5);
-        -webkit-box-shadow: 2px 6px 5px 0px rgba(151, 112, 153, 0.5);
-        -moz-box-shadow: 2px 6px 5px 0px rgba(151, 112, 153, 0.5);
-        border-radius: 5px;
+        align-items: center;
 
-        label {
-            color: rgb(162, 100, 237);
-            font-size: 20px;
-            font-weight: 600px;
-            margin-bottom: 10px;
-        }
-
-        input {
-            justify-content: flex-start;
-        }
-
-        input,
-        textarea {
-            padding: 10px;
-            border-radius: 1px;
-            margin-bottom: 10px;
-            background-color: rgb(232, 217, 248);
-            border: 1px solid rgb(181, 109, 240);
-            text-align: left;
-            font-family: $ffp;
-
-            &::placeholder {
-                color: gray;
-            }
-        }
-
-        .botone {
-            font-size: 16px;
-            background-color: rgb(203, 182, 232);
-            color: rgb(52, 12, 90);
-            border: 3px;
-            border-radius: 3px;
-            cursor: pointer;
-            text-decoration: none;
+        .formulario {
             display: $dpf;
-            margin: 10px;
-            padding: 10px;
+            justify-content: left;
+            text-align: left;
+            padding: 20px;
+            font-family: $ffp;
+            flex-direction: column;
+            width: 90%;
+            max-width: 400px;
+            background-color: rgb(217, 199, 241);
+            height: 500px;
+            border: rgb(152, 146, 175) solid 2px;
+            box-shadow: 2px 6px 5px 0px rgba(151, 112, 153, 0.5);
+            -webkit-box-shadow: 2px 6px 5px 0px rgba(151, 112, 153, 0.5);
+            -moz-box-shadow: 2px 6px 5px 0px rgba(151, 112, 153, 0.5);
+            border-radius: 5px;
+
+            label {
+                color: rgb(162, 100, 237);
+                font-size: 20px;
+                font-weight: 600px;
+                margin-bottom: 10px;
+            }
+
+            input {
+                justify-content: flex-start;
+            }
+
+            input,
+            textarea {
+                padding: 10px;
+                border-radius: 1px;
+                margin-bottom: 10px;
+                background-color: rgb(232, 217, 248);
+                border: 1px solid rgb(181, 109, 240);
+                text-align: left;
+                font-family: $ffp;
+
+                &::placeholder {
+                    color: gray;
+                }
+            }
+
+            .botone {
+                font-size: 16px;
+                background-color: rgb(203, 182, 232);
+                color: rgb(52, 12, 90);
+                border: 1px rgb(179, 148, 223) solid;
+                border-radius: 3px;
+                cursor: pointer;
+                text-decoration: none;
+                text-transform: uppercase;
+                display: $dpf;
+                margin: 10px;
+                padding: 10px;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 7px 8px 400px 40px rgba(80, 36, 125, 0.75);
+                -webkit-box-shadow: 7px 8px 400px 40px rgba(80, 36, 125, 0.75);
+                -moz-box-shadow: 7px 8px 400px 40px rgba(80, 36, 125, 0.75);
+                font-family: $ffp;
+
+                &:hover {
+                    background: rgb(203, 182, 232);
+                    background: radial-gradient(circle, rgba(203, 182, 232, 1) 0%, rgba(77, 0, 128, 1) 100%);
+                    background: radial-gradient(circle, rgba(203, 182, 232, 1) 0%, rgba(77, 0, 128, 1) 100%);
+                    color: $colorw;
+                }
+            }
+
+        }
+
+        .galeria {
             align-items: center;
             justify-content: center;
-            box-shadow: 7px 8px 400px 40px rgba(80, 36, 125, 0.75);
-            -webkit-box-shadow: 7px 8px 400px 40px rgba(80, 36, 125, 0.75);
-            -moz-box-shadow: 7px 8px 400px 40px rgba(80, 36, 125, 0.75);
-            font-family: $ffp;
+            max-width: 750px;
+            height: 100%;
+            padding: 20px;
 
-            &:hover {
-                background: rgb(203,182,232);
-                background: radial-gradient(circle, rgba(203,182,232,1) 0%, rgba(77,0,128,1) 100%);background: radial-gradient(circle, rgba(203,182,232,1) 0%, rgba(77,0,128,1) 100%);
+            .slide {
+                border-radius: 5px;
+
+                img {
+                    max-width: 100%;
+                    height: 600px;
+                    padding: 20px;
+                }
             }
         }
     }
 
+    /*QUIENES SOMOS*/
+
+    .hero-qs {
+        h1 {
+            margin: 3px;
+        }
+
+        p {
+            display: $dpb;
+            justify-content: center;
+            align-items: center;
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+
     }
+
     .caja-cont-qs {
-        display: $ffp;
-        width: 90%;
+        display: $dpb;
+        width: 68%;
         height: auto;
         margin: 0 auto;
         color: rgb(50, 28, 97);
-        font-size: 20px;
         font-family: $ffp;
         padding: 10px;
         flex-direction: column;
-        background-color: rgb(216, 180, 251);
+        background-color: rgb(234, 218, 250);
+        margin-bottom: 10px;
 
         .mision {
             display: $dpf;
 
             img {
-                width: 80%;
+                width: 70%;
                 height: 33.3%;
-                padding: 30px;
+                padding: 5px;
             }
 
             .mision-description {
                 padding-inline: 16px;
+                padding-top: 70px;
 
                 h3 {
-                    font-size: 30px;
+                    font-size: $fsh3;
                     font-weight: $fw800;
                     color: $color-h1;
-                    text-align: left;
-                    display: $dpb;
-                    padding: 20px;
-                    margin-top: 20px;
+                    padding: 10px;
+                    margin-top: 15px;
                     margin-bottom: 5px;
                 }
 
                 p {
                     font-size: 16px;
-                    align-items: left;
+                    align-content: center;
                     justify-content: left;
+                    text-align: justify;
                     padding: 5px;
                     color: rgb(77, 0, 128)
-                    
                 }
             }
         }
@@ -263,23 +290,24 @@ main {
             img {
                 width: 80%;
                 height: 33.3%;
-                padding: 10px;
-                padding: 30px;
+                padding: 5px;
             }
 
             .vision-description {
                 order: -1;
                 padding-inline: 16px;
+                padding-top: 80px;
             }
 
             h3 {
-                font-size: 30px;
+                font-size: $fsh3;
                 font-weight: $fw800;
-                color: rgb(77, 0, 128);
+                color: $color-h1;
                 text-align: right;
                 display: $dpb;
-                margin-top: 20px;
-                margin-bottom: 20px;
+                margin-top: 15px;
+                margin-bottom: 5px;
+                margin-right: 10px;
             }
 
             p {
@@ -288,7 +316,7 @@ main {
                 font-family: $ffp;
                 flex-direction: row;
                 align-items: right;
-                padding-top: 10px;
+                padding-top: 5px;
                 text-align: right;
                 color: $color-h1;
             }
@@ -300,14 +328,17 @@ main {
             img {
                 width: 80%;
                 height: 33.3%;
-                padding: 30px;
+                padding: 5px;
             }
 
             .valores-description {
                 padding-inline: 16px;
+                justify-content: center;
+                align-items: center;
+                padding-top: 40px;
 
                 h3 {
-                    font-size: 30px;
+                    font-size: $fsh3;
                     font-weight: $fw800;
                     font-family: $ffp;
                     color: rgb(77, 0, 128);
@@ -319,7 +350,7 @@ main {
 
                 ul {
                     li {
-                        font-size: 18px;
+                        font-size: 16px;
                         font-family: $ffp;
                         flex-direction: row;
                         align-items: right;
@@ -333,30 +364,49 @@ main {
 
     .hero-productos {
         display: $dpb;
-        margin: 20px;
-        padding: 20px;
+        padding: 5px;
         text-align: center;
     }
 
     .productos-description {
         display: $dpf;
-        align-items: center;
-        justify-content: space-around;
+        height: auto;
         flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 
-        .talleres {
-            width: 30%;
-            margin: 10px;
+    div.talleres {
+        padding: 5x;
+        display: $dpib;
+        width: 25%;
+        margin: 3px;
+        transition-duration: 2s;
+        transition-timing-function: 1s ease-in-out;
 
-            img {
-                height: 80%;
-                width: 100%;
-                transition-duration: 3s;
-                transition-timing-function: 2s ease-in-out;
-                &:hover{
-                scale: 1.2;
-                box-shadow: 0 0 10px purple;
-                }
+        &:hover {
+            scale: 1.05;
+
+        }
+
+        img {
+            height: 550px;
+            width: 85%;
+
+            &:hover {
+                box-shadow: 0 0 10px rgb(138, 43, 226);
             }
         }
+
+        .botone {
+            display: inline-block;
+            width: 83%;
+
+            &:hover {
+                box-shadow: 0 0 10px rgb(138, 43, 226);
+            }
+
+        }
     }
+}
